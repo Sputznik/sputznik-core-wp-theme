@@ -20,3 +20,5 @@
 		'primary' => __( 'Primary Menu', 'SPUTZNIK' ),
 
 	) );
+	
+	add_filter('show_admin_bar', '__return_false');
