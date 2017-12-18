@@ -3,7 +3,9 @@
 	$inc_files = array(
 		'class-sp-customize.php',
 		'logo.php',
-		'social_media.php'
+		'social_media.php',
+		'background.php',
+		'fonts.php'
 	);
 	
 	foreach($inc_files as $inc_file){

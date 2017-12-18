@@ -3,6 +3,20 @@
 	
 	class SP_CUSTOMIZE{
 		
+		function __construct(){
+			
+			add_action( 'wp_head', array( $this, 'styles') );
+			
+		}
+		
+		function styles(){
+			
+			echo "<style type='text/css'>";
+			do_action('sp_styles');
+			echo "</style>";
+			
+		}
+		
 		function get_social_icons(){
 			return array(
 				'fb' => array(
@@ -59,13 +73,7 @@
 		
 		function color( $wp_customize, $section, $id, $label, $default ){
 			
-			
-			
-			$wp_customize->add_setting( $id, array(
-      			'default' => $default,
-      			'transport'   => 'refresh',
-      			'type' => 'option'
-      		) );
+			$this->add_setting( $wp_customize, $id, $default );
 
     		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $id, array(
           		'label' => $label,
@@ -134,11 +142,8 @@
 		
 		function dropdown( $wp_customize, $section, $id, $label, $default, $choices){
 			
-			$wp_customize->add_setting( $id, array(
-	    		'default' 	=> $default,
-	    		'type'		=> 'option',
-				'transport' => 'refresh',
-			));
+			$this->add_setting( $wp_customize, $id, $default );
+			
 			$wp_customize->add_control( $id, array(
 				'type' 		=> 'select',	
 		    	'label'    	=> $label,
@@ -150,12 +155,8 @@
 		
 		function image( $wp_customize, $section, $id, $label, $default){
 			
-			$wp_customize->add_setting( $id, array(
-				'default' 	=> $default,
-				'transport' => 'refresh',
-				'type' 		=> 'option'
-			) );
-
+			$this->add_setting( $wp_customize, $id, $default );
+			
 			$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, $id, array(
           		'label' 	=> $label,
           		'section' 	=> $section,
@@ -163,6 +164,46 @@
 			)));
 		}
 		
+		/* wrap add setting function of wp customize */
+		function add_setting($wp_customize, $id, $default){
+			
+			$wp_customize->add_setting( $id, array(
+      			'default' => $default,
+      			'transport'   => 'refresh',
+      			'type' => 'option'
+      		) );
+			
+		}
+		
+		function list_google_fonts(){
+			
+			$google_fonts = array(
+  				array(
+  					'slug'	=> 'opensans',
+	  				'name'	=> 'Open Sans',
+  					'url'	=> 'Open+Sans:400,400italic,700,700italic'
+  				),
+  				array(
+  					'slug'	=> 'roboto',
+	  				'name'	=> 'Roboto',
+  					'url'	=> 'Roboto:400,400italic,700,700italic'
+  				),
+  			);
+			
+			return apply_filters( 'sp_list_google_fonts', $google_fonts );
+	  		
+	  	}
+		
+		function selected_fonts(){
+			
+			$sp_fonts = get_option('sp_fonts');
+			
+			return array(
+				'body'	=>  isset( $sp_fonts['body'] ) ? $sp_fonts['body'] : "Open Sans",
+				'nav'	=> 	isset( $sp_fonts['nav'] ) ? $sp_fonts['nav'] : "Open Sans",
+				'head'	=> 	isset( $sp_fonts['head'] ) ? $sp_fonts['head'] : "Open Sans",
+			);
+		}
 	}
 	
 	global $sp_customize;
