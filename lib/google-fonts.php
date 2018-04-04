@@ -4,8 +4,8 @@
 		
 		$fonts[] = array(
 			'slug'	=> 'noto',
-			'name'	=> 'Noto Sans',
-			'url'	=> 'Noto+Sans'
+			'name'	=> 'Noto Serif',
+			'url'	=> 'Noto+Serif'
 		);
 		
 		$fonts[] = array(
