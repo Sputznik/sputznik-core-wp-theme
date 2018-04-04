@@ -1,6 +1,11 @@
+<?php $logo = get_option( 'sp_logo' );?>
 <div class="logo">
 	<a href="<?php bloginfo('url');?>">
-		<img class="hidden-xs" src="<?php echo esc_url( get_theme_mod( 'sp_logo' ) );?>">
-		<img class="visible-xs" src="<?php echo esc_url( get_theme_mod( 'sp_xs_logo' ) );?>">
+		<?php if( isset( $logo['desktop'] ) && $logo['desktop'] ):?>
+		<img class="<?php if( isset( $logo['mobile'] ) ):?>hidden-xs<?php endif;?>" src="<?php echo esc_url( $logo['desktop'] );?>">
+		<?php endif;?>
+		<?php if( isset( $logo['mobile'] ) && $logo['mobile'] ):?>
+		<img class="visible-xs" src="<?php echo esc_url( $logo['mobile'] );?>">
+		<?php endif;?>
 	</a>
 </div>
