@@ -3,6 +3,12 @@
 	add_filter( 'sp_list_google_fonts', function( $fonts ){
 		
 		$fonts[] = array(
+			'slug'	=> 'noto',
+			'name'	=> 'Noto Sans',
+			'url'	=> 'Noto+Sans'
+		);
+		
+		$fonts[] = array(
 			'slug'	=> 'oswald',
 			'name'	=> 'Oswald',
 			'url'	=> 'Oswald:300,400'
@@ -17,7 +23,7 @@
 		$fonts[] = array(
   			'slug'	=> 'raleway',
 	  		'name'	=> 'Raleway',
-  			'url'	=> '//fonts.googleapis.com/css?family=Raleway:400,700'
+  			'url'	=> 'Raleway:400,700'
   		);
 		
 		
