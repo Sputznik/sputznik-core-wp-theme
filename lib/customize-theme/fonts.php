@@ -75,7 +75,7 @@
 		$fonts = $sp_customize->selected_fonts();
 		
 		if( isset( $fonts['body'] ) ){
-			echo "font-family: ".$fonts['body'].";";
+			echo "font-family: '".$fonts['body']."';";
 		}
 		
 	});
