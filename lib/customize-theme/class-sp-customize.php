@@ -3,10 +3,26 @@
 	
 	class SP_CUSTOMIZE{
 		
+		var $option;
+		var $option_slug;
+		
 		function __construct(){
+			
+			$this->option_slug = 'sp_theme';
+			$this->option = get_option( $this->option_slug );
 			
 			add_action( 'wp_head', array( $this, 'styles') );
 			
+		}
+		
+		function get_option(){
+			
+			return $this->option;
+			
+		}
+		
+		function get_option_slug( $id = '' ){
+			return $this->option_slug.$id;
 		}
 		
 		function styles(){
@@ -36,13 +52,13 @@
 		
 		function get_header_type(){
 			
-			$header_type = get_option('sp_header_type');
+			$option = $this->get_option();
 			
-			if( !isset( $header_type ) ){
-				$header_type = 'header1';
+			if( isset( $option['header_type'] ) && $option['header_type'] ){
+				return $option['header_type'];
 			}
 			
-			return $header_type;
+			return 'header1';
 		}
 		
 		function panel( $wp_customize, $id, $label){
@@ -73,6 +89,8 @@
 		
 		function color( $wp_customize, $section, $id, $label, $default ){
 			
+			$id = $this->get_option_slug( $id );
+			
 			$this->add_setting( $wp_customize, $id, $default );
 
     		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $id, array(
@@ -87,6 +105,8 @@
 		}
 		
 		function checkbox( $wp_customize, $section, $id, $label ){
+			
+			$id = $this->get_option_slug( $id );
 			
 			$wp_customize->add_setting($id, array(
 				'default' => 0,
@@ -108,6 +128,8 @@
 		
 		function text( $wp_customize, $section, $id, $label, $default){
 			
+			$id = $this->get_option_slug( $id );
+			
 			$wp_customize->add_setting($id, array(
        			'default' 	=> $default,
        			'capability'=> 'edit_theme_options',
@@ -124,6 +146,8 @@
 		}
 		
 		function textarea( $wp_customize, $section, $id, $label, $default){
+			
+			$id = $this->get_option_slug( $id );
 			
 			$wp_customize->add_setting($id, array(
        			'default' 	=> $default,
@@ -142,6 +166,8 @@
 		
 		function dropdown( $wp_customize, $section, $id, $label, $default, $choices){
 			
+			$id = $this->get_option_slug( $id );
+			
 			$this->add_setting( $wp_customize, $id, $default );
 			
 			$wp_customize->add_control( $id, array(
@@ -154,6 +180,8 @@
 		}
 		
 		function image( $wp_customize, $section, $id, $label, $default){
+			
+			$id = $this->get_option_slug( $id );
 			
 			$this->add_setting( $wp_customize, $id, $default );
 			
@@ -168,42 +196,13 @@
 		function add_setting($wp_customize, $id, $default){
 			
 			$wp_customize->add_setting( $id, array(
-      			'default' => $default,
-      			'transport'   => 'refresh',
-      			'type' => 'option'
+      			'default' 		=> $default,
+      			'transport'   	=> 'refresh',
+      			'type'			=> 'option'
       		) );
 			
 		}
 		
-		function list_google_fonts(){
-			
-			$google_fonts = array(
-  				array(
-  					'slug'	=> 'opensans',
-	  				'name'	=> 'Open Sans',
-  					'url'	=> 'Open+Sans:400,400italic,700,700italic'
-  				),
-  				array(
-  					'slug'	=> 'roboto',
-	  				'name'	=> 'Roboto',
-  					'url'	=> 'Roboto:400,400italic,700,700italic'
-  				),
-  			);
-			
-			return apply_filters( 'sp_list_google_fonts', $google_fonts );
-	  		
-	  	}
-		
-		function selected_fonts(){
-			
-			$sp_fonts = get_option('sp_fonts');
-			
-			return array(
-				'body'	=>  isset( $sp_fonts['body'] ) ? $sp_fonts['body'] : "Open Sans",
-				'nav'	=> 	isset( $sp_fonts['nav'] ) ? $sp_fonts['nav'] : "Open Sans",
-				'head'	=> 	isset( $sp_fonts['head'] ) ? $sp_fonts['head'] : "Open Sans",
-			);
-		}
 	}
 	
 	global $sp_customize;

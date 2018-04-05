@@ -9,7 +9,7 @@
 		$icons = $sp_customize->get_social_icons();
 		
 		foreach( $icons as $slug => $icon ){
-			$sp_customize->text( $wp_customize, 'sp_social_media_section', 'sp_social_media['.$slug.']', $icon['label'], '');	
+			$sp_customize->text( $wp_customize, 'sp_social_media_section', '[social_media]['.$slug.']', $icon['label'], '');	
 		}
 		
 		

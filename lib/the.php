@@ -1,11 +1,6 @@
 <?php 
 	
-	if ( ! function_exists( 'the_sp_logo' ) ) {
-		function the_sp_logo(){
-			include( get_template_directory()."/partials/logo.php" );
-		}
-	}
-	
+	/*
 	if ( ! function_exists( 'the_sp_header' ) ) {
 		function the_sp_header(){
 			
@@ -15,7 +10,7 @@
 			
 		}
 	}
-	
+	*/
 	
 	if ( ! function_exists( 'the_sp_footer' ) ) {
 		function the_sp_footer(){

@@ -7,6 +7,6 @@
 		<title><?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?></title>
 		<?php wp_head();?>
 	</head>
-	<body>
-		<?php the_sp_header();?>
+	<body <?php body_class(); ?>>
+		<?php do_action('sp_header');?>
 		
