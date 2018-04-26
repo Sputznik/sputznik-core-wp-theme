@@ -12,7 +12,7 @@
 			<span class="hamb-middle"></span>
 			<span class="hamb-bottom"></span>
 		</button>
-		<div class="container header1">
+		<div class="container">
 			<div class="row">
 				<div class="col-md-12"><?php do_action('sp_logo');?></div>
 			</div>

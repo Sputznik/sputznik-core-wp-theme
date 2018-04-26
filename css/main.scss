@@ -21,6 +21,10 @@ body,html { height: 100%;}
 		
 	}
 	
+	.navbar-brand{
+		float: none;
+	}
+	
 	.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {background-color: transparent;}
 	
 	/*-------------------------------*/
@@ -44,7 +48,7 @@ body,html { height: 100%;}
 	/*           Wrappers            */
 	/*-------------------------------*/
 
-	#wrapper {
+	&#wrapper {
 		padding-left: 0;
 		-webkit-transition: all 0.5s ease;
 		-moz-transition: all 0.5s ease;
