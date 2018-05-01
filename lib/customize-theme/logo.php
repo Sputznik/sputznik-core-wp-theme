@@ -61,7 +61,7 @@
 				
 			_e('</a></div>');
 		}
-	});
+	}, 1);
 	
 	/* ADD HEADER */
 	add_action('sp_header', function(){
