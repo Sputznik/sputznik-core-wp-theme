@@ -5,7 +5,8 @@
 		'lib/wp_bootstrap_navwalker.php',
 		'lib/customize-theme/main.php',
 		'lib/google-fonts.php',
-		'lib/the.php'
+		'lib/the.php',
+		
 	);
 	
 	foreach($inc_files as $inc_file){
@@ -44,6 +45,46 @@
 	
 	/* HIDE ADMIN BAR FROM THE FRONTEND */
 	add_filter('show_admin_bar', '__return_false');
+	
+	/* ADD HEADER */
+	add_action('sp_header', function(){
+		global $sp_customize;
+		
+		$header_type = $sp_customize->get_header_type();
+		
+		$header_template = apply_filters( 'sp_'.$header_type.'_template', 'partials/headers/'.$sp_customize->get_header_type().'.php' );
+		
+		require_once( $header_template );
+		
+	});
+	
+	/* HEADER MENU */
+	add_action('sp_nav_menu', function(){
+		
+		$sp_nav_menu_options = apply_filters( 'sp_nav_menu_options', array(
+			'menu'              => 'primary',
+			'theme_location'    => 'primary',
+			'depth'             => 2,
+			'container'         => 'div',
+			'container_class'   => 'navbar navbar-inverse navbar-fixed-top',
+			'container_id'      => 'sidebar-wrapper',
+			'menu_class'        => 'nav sidebar-nav',
+			'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+			'walker'            => new wp_bootstrap_navwalker()
+		));
+		
+		wp_nav_menu( $sp_nav_menu_options );
+		
+	});
+	
+	/* PRINT LOGOS TO THE HEADER */
+	add_action('sp_logo', function(){
+		
+		$template = apply_filters('sp_logo_template', 'partials/logo.php');	
+		
+		include( $template );
+		
+	}, 1);
 	
 	
 	add_action( 'widgets_init', function(){
