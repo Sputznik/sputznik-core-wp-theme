@@ -24,7 +24,7 @@
 		
 		wp_enqueue_style('google-fonts', $google_fonts_url, false, null );
 		
-		wp_enqueue_style( 'sp-core-style', get_template_directory_uri() .'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts'), '1.0.3' );
+		wp_enqueue_style( 'sp-core-style', get_template_directory_uri() .'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts'), '1.0.4' );
 		
 		wp_deregister_script('jquery');
 		wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);

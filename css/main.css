@@ -19,13 +19,34 @@ body, html {
   /*       Hamburger-Cross         */
   /*-------------------------------*/ }
   .header1 .logo {
-    margin: 40px auto;
+    margin: 5px auto;
     width: 300px; }
     .header1 .logo img {
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      max-width: 100%;
+      height: auto; }
+    @media (max-width: 500px) {
+      .header1 .logo {
+        width: 200px;
+        float: right; } }
+  .header1 .affix-top, .header1 .affix {
+    padding: 40px 20px;
+    width: 100%;
+    z-index: 999; }
+  .header1 .affix-top {
+    margin-bottom: 50px; }
+  .header1 .affix {
+    top: 0;
+    padding: 20px; }
+    @media (min-width: 960px) {
+      .header1 .affix .logo {
+        float: right;
+        margin-right: 10px;
+        width: 200px; } }
   .header1 .navbar-brand {
-    float: none; }
+    float: none;
+    padding: 0; }
   .header1 .nav .open > a, .header1 .nav .open > a:hover, .header1 .nav .open > a:focus {
     background-color: transparent; }
   .header1 .overlay {
@@ -142,13 +163,11 @@ body, html {
       background-color: #222;
       box-shadow: none; }
   .header1 .hamburger {
-    position: fixed;
-    top: 20px;
-    z-index: 999;
+    float: left;
+    position: relative;
     display: block;
     width: 32px;
     height: 32px;
-    margin-left: 15px;
     background: transparent;
     border: none; }
     .header1 .hamburger:hover, .header1 .hamburger:focus, .header1 .hamburger:active {
