@@ -9,7 +9,7 @@ body,html { height: 100%;}
 .header1{
 	
 	.logo{
-		margin: 5px auto;
+		margin: 40px auto;
 		width: 300px;
 		
 		img{
@@ -18,39 +18,10 @@ body,html { height: 100%;}
 			max-width: 100%;
 			height: auto;
 		}
-		
-		@media( max-width: 500px ){
-			width: 200px;
-			float: right;
-		}
-	}
-	
-	.affix-top, .affix{
-		padding: 40px 20px;
-		width: 100%;
-		z-index: 999;
-	}
-	
-	.affix-top{
-		margin-bottom: 50px;
-	}
-	
-	.affix{
-		top: 0;
-		padding: 20px;
-		
-		@media( min-width: 960px ){
-			.logo{
-				float: right;
-				margin-right: 10px;
-				width: 200px;
-			}
-		}
 	}
 	
 	.navbar-brand{
 		float: none;
-		padding: 0;
 	}
 	
 	.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {background-color: transparent;}
@@ -228,8 +199,10 @@ body,html { height: 100%;}
 	/*-------------------------------*/
 
 	.hamburger {
-		float: left;
-		position: relative;
+		margin-left: 20px;
+		position: fixed;
+		top: 20px;
+		z-index: 999;
 		
 		display: block;
 		width: 32px;
