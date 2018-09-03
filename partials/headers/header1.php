@@ -1,19 +1,16 @@
-<div id="wrapper" class="header1">
-	<div class="overlay"></div>
-			
-	<!-- Sidebar -->
-	<?php do_action('sp_nav_menu');?>
-	<!-- /#sidebar-wrapper -->
-
-	<!-- Page Content -->
-	<div id="page-content-wrapper">
-		<button type="button" class="hamburger is-closed" data-toggle="offcanvas">
-			<span class="hamb-top"></span>
-			<span class="hamb-middle"></span>
-			<span class="hamb-bottom"></span>
-		</button> 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12"><?php do_action('sp_logo');?></div>
-			</div>
+<div class="header1">
+	<div class='affix-top' data-spy="affix" data-offset-top="60">
+		<div class='fixed-col'>
+			<?php do_action('sp_sticky_logo');?>
+			<button type="button" class="navbar-toggle" data-toggle="modal" data-target="#header1-modal"> 
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
 		</div>
+	</div>
+	<?php do_action('sp_logo');?>
+</div>
+
+

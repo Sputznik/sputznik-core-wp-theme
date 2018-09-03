@@ -27,8 +27,18 @@
 	/* CLOSING THE CONTAINER DIVS FOR HEADER 1 */
 	global $sp_customize;
 	$header_type = $sp_customize->get_header_type();
-	_e('</div><!-- /#page-content-wrapper --></div><!-- /#wrapper -->');
+	if( $header_type == 'header1' ):
 ?>
+	<div id="header1-modal" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<?php do_action('sp_nav_menu');?>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->	
+<?php endif;?>
 
 <?php wp_footer();?>
 </body>
