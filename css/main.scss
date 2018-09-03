@@ -27,6 +27,10 @@ body,html { height: 100%;}
 		}
 	}
 	
+	.affix{
+		box-shadow: #b7b7b7 0 1px 8px 0;
+	}
+	
 	.affix-top{
 		.logo{
 			display: none;
@@ -81,7 +85,7 @@ body,html { height: 100%;}
 		a[href]{
 			color: #ccc;
 			
-			&:hover{
+			&:hover, &:focus{
 				background: none;
 				color: #eee;
 			}

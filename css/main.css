@@ -17,6 +17,8 @@ body, html {
     max-width: 200px; }
     .header1 .affix-top .logo .navbar-brand, .header1 .affix .logo .navbar-brand {
       padding: 0; }
+.header1 .affix {
+  box-shadow: #b7b7b7 0 1px 8px 0; }
 .header1 .affix-top .logo {
   display: none; }
 .header1 .navbar-toggle {
@@ -46,7 +48,7 @@ body, html {
       text-align: center; }
     #header1-modal .modal-content a[href] {
       color: #ccc; }
-      #header1-modal .modal-content a[href]:hover {
+      #header1-modal .modal-content a[href]:hover, #header1-modal .modal-content a[href]:focus {
         background: none;
         color: #eee; }
   #header1-modal .modal-dialog {
