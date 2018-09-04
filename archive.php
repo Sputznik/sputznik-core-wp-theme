@@ -1,11 +1,19 @@
 <?php get_header();?>
 	<div class="container">
 		<div class="row">
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<div class="col-lg-4">
-					<?php the_content(); ?>
-				</div>
-			<?php endwhile; endif; ?>			
+			<div class='col-sm-12'>
+				<h1>Archives</h1>
+				<hr>
+				<?php if (have_posts()) : ?>
+				<ul class='orbit-three-grid' style='margin-bottom:50px'>
+					<?php while (have_posts()) : the_post(); ?>
+					<li class="orbit-article-db orbit-list-db">
+						<?php get_template_part('partials/post', 'common');?>
+					</li>
+					<?php endwhile; ?>
+				</ul>
+				<?php endif; ?>			
+			</div>
 		</div>
 	</div>
 <?php get_footer();?>
