@@ -8,8 +8,8 @@
 			<h1 class="post-title text-left"><strong><?php the_title_attribute(); ?></strong></h1>
 			<?php the_content(); ?>
 			<div class="post-nav">
-				<span class="pull-left"><?php previous_post_link("&laquo; %link", "Previous"); ?></span>
-				<span class="pull-right"><?php next_post_link("%link &raquo;", "Next"); ?></span>
+				<span class="pull-left"><?php previous_post_link("%link", "&laquo; Previous"); ?></span>
+				<span class="pull-right"><?php next_post_link("%link", "Next &raquo;"); ?></span>
 			</div>
 			<?php endwhile;endif;?>
 		</div>
