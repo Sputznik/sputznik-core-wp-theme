@@ -48,9 +48,25 @@ $.fn.smooth_scroll = function( options ) {
 	});
 };
 
+
+
+
 $(document).ready(function () {
 	
 	$('a[href]').smooth_scroll();
 	
 	
+});
+
+
+/****Header3 Scroll ToggleClass****/
+$(window).scroll(function(){
+	$('.header3 nav').toggleClass('scrolled', $(this).scrollTop() > 5);
+});
+
+
+/***Bootstrap Navigation Active Class Toggle***/
+$( '.navbar-nav a' ).on( 'click', function () {
+	$( '.navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
 });
