@@ -4,10 +4,6 @@ a[href]{
 
 body,html { height: 100%;}
 
-body {
-	height: 2000px;
-}
-
 
 .header1{
 
@@ -111,6 +107,15 @@ body {
 		top: 0;
 		width: 100%;
 		z-index: 999;
+
+	}
+
+	.logo {
+		max-width: 200px;
+
+		img {
+			max-width: 100%;
+		}
 	}
 
 

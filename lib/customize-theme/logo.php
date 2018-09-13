@@ -10,7 +10,10 @@
 		
 		/** LOGO IMAGE */ 
 		$sp_customize->image( $wp_customize, 'sp_logo_section', '[logo][desktop]', 'Logo', '');
-		
+
+		/** Sticky Image **/
+		$sp_customize->image( $wp_customize, 'sp_logo_section', '[logo][sticky]', 'Sticky Logo', '');
+
 		/** LOGO MOBILE IMAGE */ 
 		$sp_customize->image( $wp_customize, 'sp_logo_section', '[logo][mobile]', 'Mobile Logo', '');
 		
