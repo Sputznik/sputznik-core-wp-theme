@@ -103,6 +103,14 @@ body,html { height: 100%;}
 
 .header3 {
 
+	.desktop-log {
+		display: block;
+	}
+
+	.sticky-logo {
+		display: none;
+	}
+
 	.affix {
 		top: 0;
 		width: 100%;
@@ -187,6 +195,14 @@ body,html { height: 100%;}
     .scrolled{
 
         background-color:#fff;
+
+        .desktop-logo {
+        	display: none;
+        }
+
+        .sticky-logo {
+        	display: block;
+        }
 
         .navbar-nav { 
 

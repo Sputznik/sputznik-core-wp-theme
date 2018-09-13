@@ -57,6 +57,10 @@ body, html {
 /********Header 3 Styles*******************/
 .header3 {
   /*****Override on Scroll****/ }
+  .header3 .desktop-log {
+    display: block; }
+  .header3 .sticky-logo {
+    display: none; }
   .header3 .affix {
     top: 0;
     width: 100%;
@@ -102,6 +106,10 @@ body, html {
       background-color: inherit; }
   .header3 .scrolled {
     background-color: #fff; }
+    .header3 .scrolled .desktop-logo {
+      display: none; }
+    .header3 .scrolled .sticky-logo {
+      display: block; }
     .header3 .scrolled .navbar-nav .active > a, .header3 .scrolled .navbar-nav .active > a:focus, .header3 .scrolled .navbar-nav .active > a:hover {
       color: #000; }
     .header3 .scrolled .navbar-nav li a, .header3 .scrolled .navbar-nav li.dropdown a, .header3 .scrolled .navbar-nav li.dropdown:hover a, .header3 .scrolled .navbar-nav li.dropdown:focus a, .header3 .scrolled .navbar-nav li.dropdown:active a {
