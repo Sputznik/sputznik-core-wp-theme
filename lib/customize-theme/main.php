@@ -5,7 +5,8 @@
 		'logo.php',
 		'social_media.php',
 		'background.php',
-		'fonts.php'
+		'fonts.php',
+		'footer.php'
 	);
 	
 	foreach($inc_files as $inc_file){

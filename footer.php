@@ -4,8 +4,11 @@
 		<div class="row">
 		<?php 
 			
-			global $sp_theme;
-			$footer_cols = '4';
+			global $sp_theme, $sp_customize;
+
+			$option = $sp_customize->get_option();
+
+			$footer_cols = $option['footer']['column'];	
 			
 			for( $i = 1; $i<=$footer_cols; $i++ ){
 				
