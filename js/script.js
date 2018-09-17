@@ -59,14 +59,17 @@ $(document).ready(function () {
 });
 
 
-/****Header3 Scroll ToggleClass****/
+/****Header3 Scroll Toggle****/
 $(window).scroll(function(){
 	$('.header3 nav').toggleClass('scrolled', $(this).scrollTop() > 5);
 });
 
+$(document).ready(function(){
+	//Bootstrap Navigation Active ToggleClass
+	$( '.navbar-nav a' ).on( 'click', function (event) {
+		
+		$( '.navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+		$( this ).parent( 'li' ).addClass( 'active' );
 
-/***Bootstrap Navigation Active Class Toggle***/
-$( '.navbar-nav a' ).on( 'click', function () {
-	$( '.navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
-	$( this ).parent( 'li' ).addClass( 'active' );
+	});	
 });

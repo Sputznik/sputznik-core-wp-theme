@@ -103,13 +103,10 @@ body,html { height: 100%;}
 
 .header3 {
 
-	.desktop-log {
+	.desktop-logo {
 		display: block;
 	}
 
-	.sticky-logo {
-		display: none;
-	}
 
 	.affix {
 		top: 0;
@@ -141,22 +138,22 @@ body,html { height: 100%;}
 	    }
 
 	    .navbar-nav>li>a {
-			color: #fff;
+			color: #000;
 			background-color: inherit;
 			border-bottom: 2px solid transparent;
 		}
 
 		.navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-nav>.active>a:hover{
-	        color: #fff;
+	        color: #000;
 	        border-color: #e7e7e7;
 	        background-color: inherit;
 	    }
 
 	    .navbar-toggle {
-	    	border-color: #fff;
+	    	border-color: #000;
 	    	
 	    	.icon-bar {
-    			background-color: #fff;
+    			background-color: #000;
     		}	
 	    }
 
@@ -182,7 +179,7 @@ body,html { height: 100%;}
 
 	    li {
 	    		a {
-			    color: #fff;
+			    color: #000;
 			    border-color: #e7e7e7;
 			    font-weight: 700;
 			    background-color: inherit;
@@ -190,9 +187,11 @@ body,html { height: 100%;}
     	}
     }
 
+    
+
 
     /*****Override on Scroll****/
-    .scrolled{
+    .navbar-default.sticky-solid, .scrolled{
 
         background-color:#fff;
 
