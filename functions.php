@@ -140,9 +140,9 @@
 
 
 	function sp_is_sticky_nav_transparent(){
-    global $post, $sp_customize;
+	    global $post, $sp_customize;
 
-    return get_post_meta( $post->ID, $key = 'sticky_transparent', true );
-  }
+	    return get_post_meta( $post->ID, $key = 'sticky_transparent', true );
+	}
 	
 	

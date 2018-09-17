@@ -1,5 +1,5 @@
 <?php
-	global $sp_customize, $post;
+	global $sp_customize;
 		
 	$option = $sp_customize->get_option();
 
