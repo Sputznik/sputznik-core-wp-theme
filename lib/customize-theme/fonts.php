@@ -164,7 +164,7 @@
 				
 				// ADD FONT SIZE
 				if( isset( $option['font_size'] ) && $option['font_size'] && isset( $option['font_size'][ $element ] ) ){
-					echo "font-size: ".$option['font_size'][ $element ].";";
+					//echo "font-size: ".$option['font_size'][ $element ].";";
 				}
 				
 				_e("}");

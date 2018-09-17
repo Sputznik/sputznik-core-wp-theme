@@ -27,14 +27,14 @@ $.fn.smooth_scroll = function( options ) {
 		// RETURN TARGET ELEMENT
 		$el.getTarget = function(){
 			var hash = $el.parseURL( $el.attr( 'href' ) ).hash;
-			return $( hash );
+			return $('body').find( hash );
 		};
 		
 		
 		$el.on( 'click', function( event ) {
-			event.preventDefault();
+			
 			if( $el.isTargetValid() ){
-				
+				event.preventDefault();
 				$('.modal').modal('hide');
 				
 				$('html, body').stop().animate({
