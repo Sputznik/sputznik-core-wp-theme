@@ -141,8 +141,17 @@
 
 	function sp_is_sticky_nav_transparent(){
 	    global $post, $sp_customize;
+	    
+	    $option = $sp_customize->get_option();
+	    
+	    if ( isset($option['header_type']) && $option['header_type'] === 'header3' ) {
+	    	
+	    	$val = get_post_meta( $post->ID, $key = 'sticky_transparent', true ); 
+	    	
+	    	return isset($val) ? (bool)$val : 0;
+	    }
 
-	    return get_post_meta( $post->ID, $key = 'sticky_transparent', true );
+	    return 0; 
 	}
 	
 	

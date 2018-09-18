@@ -13,7 +13,7 @@
 		_e('<div class="logo"><a class="navbar-brand" href="'.get_bloginfo('url').'">');
 
 
-		if( $option['header_type'] === 'header3' && (bool)$nav_transparent ){
+		if( $option['header_type'] === 'header3' && $nav_transparent ){
 
 			/* Sticky Logo */
 			if( isset( $option['logo']['sticky'] ) && $option['logo']['sticky'] ){

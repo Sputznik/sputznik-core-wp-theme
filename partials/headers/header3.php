@@ -1,7 +1,7 @@
 <?php 
   
   $nav_transparent = sp_is_sticky_nav_transparent();
-  $bg_class = (! (bool)$nav_transparent ) ? 'sticky-solid' : '';
+  $bg_class = (! $nav_transparent ) ? 'sticky-solid' : '';
   
 ?>
 
