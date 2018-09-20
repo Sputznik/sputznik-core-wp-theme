@@ -4,6 +4,13 @@ a[href]{
 
 body,html { height: 100%;}
 
+.fixed-col { 
+	max-width: 1200px; 
+	padding: 50px 15px; 
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
 
 .header1{
 
@@ -138,22 +145,22 @@ body,html { height: 100%;}
 	    }
 
 	    .navbar-nav>li>a {
-			color: #000;
+			color: #fff;
 			background-color: inherit;
 			border-bottom: 2px solid transparent;
 		}
 
 		.navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-nav>.active>a:hover{
-	        color: #000;
+	        color: #fff;
 	        border-color: #e7e7e7;
 	        background-color: inherit;
 	    }
 
 	    .navbar-toggle {
-	    	border-color: #000;
+	    	border-color: #fff;
 	    	
 	    	.icon-bar {
-    			background-color: #000;
+    			background-color: #fff;
     		}	
 	    }
 
@@ -179,7 +186,7 @@ body,html { height: 100%;}
 
 	    li {
 	    		a {
-			    color: #000;
+			    color: #fff;
 			    border-color: #e7e7e7;
 			    font-weight: 700;
 			    background-color: inherit;
