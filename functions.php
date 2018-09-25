@@ -31,7 +31,7 @@
 		
 		wp_enqueue_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), null, true );
 		
-		wp_enqueue_script( 'sputznik', get_template_directory_uri() . '/js/script.min.js', array('bootstrap'), '1.0.5', true );
+		wp_enqueue_script( 'sputznik', get_template_directory_uri() . '/js/script.js', array('bootstrap'), '1.0.6', true );
 		
 	});
 	
