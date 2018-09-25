@@ -101,10 +101,8 @@ body, html {
     letter-spacing: 1px;
     font-weight: 700; }
   .header3 .dropdown-menu {
-    background-color: transparent;
     border-radius: 0; }
     .header3 .dropdown-menu li a {
-      color: #fff;
       border-color: #e7e7e7;
       font-weight: 700;
       background-color: inherit; }
@@ -122,10 +120,6 @@ body, html {
       border-color: #000; }
       .header3 .navbar-default.sticky-solid .navbar-toggle .icon-bar, .header3 .scrolled .navbar-toggle .icon-bar {
         background-color: #000; }
-    .header3 .navbar-default.sticky-solid .dropdown-menu, .header3 .scrolled .dropdown-menu {
-      background-color: #fff; }
-    .header3 .navbar-default.sticky-solid .open .dropdown-menu > li > a, .header3 .scrolled .open .dropdown-menu > li > a {
-      color: #000; }
 
 @media (max-width: 768px) {
   .header3 .navbar-default .navbar-nav > .active > a, .header3 .navbar-default .navbar-nav > .active > a:focus, .header3 .navbar-default .navbar-nav > .active > a:hover {
