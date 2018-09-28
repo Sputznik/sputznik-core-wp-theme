@@ -12,6 +12,12 @@ body,html { height: 100%;}
 }
 
 
+.header3 ~ .container > .row > .search-content {
+	margin-top: 6%;
+}
+
+
+
 .header1{
 
 	.fixed-col{
@@ -75,7 +81,7 @@ body,html { height: 100%;}
 	
 }
 
-#header1-modal{
+#header1-modal {
 	
 	background: rgba(0, 0, 0, 0.9);
 	
@@ -236,6 +242,56 @@ body,html { height: 100%;}
 }
 
 
+#search-modal{
+	
+		background: rgba(0, 0, 0, 0.9);
+
+		.modal-dialog{
+			top: 25%;
+		}
+		
+		.modal-content{
+			box-shadow: none;
+			background: transparent;
+
+
+			input[type='search'] {
+				width: 100%!important;
+			   	color: rgb(255, 255, 255);
+			    background: transparent;
+			    font-size: 40px;
+			    font-weight: 300;
+			    text-align: center;
+			    border: 0px;
+			    outline: none;
+			}
+
+			.btn {
+				position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    margin-top: 61px;
+			    margin-left: -45px;
+			    font-family: Arial, Helvetica, Geneva, sans-serif;
+			    font-size: 16px!important;
+			    padding: 1em 2em;
+			    background: transparent;
+			    border: 2px solid #fff;
+			    border-radius: 0em;
+			    -webkit-border-radius: 0em;
+			    -moz-border-radius: 0em;
+			    cursor: pointer;
+			    line-height: 1em;
+			}
+
+		}
+		
+		.modal-dialog{
+			max-width: 600px;
+		}
+	}
+
+
 
 
 @media (max-width: 768px){
@@ -260,6 +316,11 @@ body,html { height: 100%;}
 			}		
 		}
   	}
+
+  	.header3 ~ .container > .row > .search-content{
+		margin-top: 20%;
+	}
+  	
 }
 
 

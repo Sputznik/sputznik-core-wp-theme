@@ -65,6 +65,7 @@ $(window).scroll(function(){
 });
 
 $(document).ready(function(){
+	
 	//Bootstrap Navigation Active ToggleClass
 	$( '.navbar-nav a' ).on( 'click', function (event) {
 		
@@ -72,4 +73,6 @@ $(document).ready(function(){
 		$( this ).parent( 'li' ).addClass( 'active' );
 
 	});	
+
+
 });

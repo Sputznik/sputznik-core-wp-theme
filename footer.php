@@ -43,6 +43,20 @@
 	</div><!-- /.modal -->	
 <?php endif;?>
 
+
+<div id="search-modal" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<form method="GET" action="<?php bloginfo('url');?>">
+			        <input type="search" name="s" value="" placeholder="type keyword(s) here">
+			        <button type="submit" class="btn btn-primary">Search</button>
+			    </form>
+			</div>
+		</div>
+	</div>
+</div>
+
 <?php wp_footer();?>
 </body>
 </html>
