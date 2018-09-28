@@ -10,6 +10,9 @@ body, html {
   margin-left: auto;
   margin-right: auto; }
 
+.header3 ~ .container > .row > .search-content {
+  margin-top: 6%; }
+
 .header1 .fixed-col {
   padding: 10px 20px; }
 .header1 .affix-top, .header1 .affix {
@@ -121,13 +124,51 @@ body, html {
       .header3 .navbar-default.sticky-solid .navbar-toggle .icon-bar, .header3 .scrolled .navbar-toggle .icon-bar {
         background-color: #000; }
 
+#search-modal {
+  background: rgba(0, 0, 0, 0.9); }
+  #search-modal .modal-dialog {
+    top: 25%; }
+  #search-modal .modal-content {
+    box-shadow: none;
+    background: transparent; }
+    #search-modal .modal-content input[type='search'] {
+      width: 100% !important;
+      color: white;
+      background: transparent;
+      font-size: 40px;
+      font-weight: 300;
+      text-align: center;
+      border: 0px;
+      outline: none; }
+    #search-modal .modal-content .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: 61px;
+      margin-left: -45px;
+      font-family: Arial, Helvetica, Geneva, sans-serif;
+      font-size: 16px !important;
+      padding: 1em 2em;
+      background: transparent;
+      border: 2px solid #fff;
+      border-radius: 0em;
+      -webkit-border-radius: 0em;
+      -moz-border-radius: 0em;
+      cursor: pointer;
+      line-height: 1em; }
+  #search-modal .modal-dialog {
+    max-width: 600px; }
+
 @media (max-width: 768px) {
   .header3 .navbar-default .navbar-nav > .active > a, .header3 .navbar-default .navbar-nav > .active > a:focus, .header3 .navbar-default .navbar-nav > .active > a:hover {
     border-color: transparent; }
   .header3 .navbar-nav .open .dropdown-menu > li > a, .header3 .navbar-nav .open .dropdown-menu > li > a:focus, .header3 .navbar-nav .open .dropdown-menu > li > a:hover {
     color: #fff; }
   .header3 .scrolled .open .dropdown-menu > li > a, .header3 .scrolled .open .dropdown-menu > li > a:focus, .header3 .scrolled .open .dropdown-menu > li > a:hover {
-    color: #000; } }
+    color: #000; }
+
+  .header3 ~ .container > .row > .search-content {
+    margin-top: 20%; } }
 /******************************************/
 
 /*# sourceMappingURL=main.css.map */

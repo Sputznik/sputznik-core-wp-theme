@@ -24,7 +24,7 @@
 		
 		wp_enqueue_style('google-fonts', $google_fonts_url, false, null );
 		
-		wp_enqueue_style( 'sp-core-style', get_template_directory_uri() .'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts'), '1.0.9' );
+		wp_enqueue_style( 'sp-core-style', get_template_directory_uri() .'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts'), '1.1.0' );
 		
 		wp_deregister_script('jquery');
 		wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
@@ -142,6 +142,10 @@
 	function sp_is_sticky_nav_transparent(){
 	    global $post, $sp_customize;
 	    
+	    if( is_search() ){
+	    	return 0;
+	    }
+
 	    $option = $sp_customize->get_option();
 	    
 	    if ( isset($option['header_type']) && $option['header_type'] === 'header3' ) {
@@ -150,8 +154,19 @@
 	    	
 	    	return isset($val) ? (bool)$val : 0;
 	    }
+		
 
 	    return 0; 
 	}
 	
+
+	
+	add_filter( 'wp_nav_menu_items', 'sp_menu_search_link', 10, 2 );
+	
+	function sp_menu_search_link( $items, $args ){
+		if( $args->theme_location == 'primary' ){
+	        $items .= '<li class="sp_search_item"><a href="#"><i class="fa fa-search" data-toggle="modal" data-target="#search-modal"></i></a></li>';
+	    }
+	    return $items;
+	}
 	
