@@ -24,7 +24,7 @@
 		
 		wp_enqueue_style('google-fonts', $google_fonts_url, false, null );
 		
-		wp_enqueue_style( 'sp-core-style', get_template_directory_uri() .'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts'), '1.1.0' );
+		wp_enqueue_style( 'sp-core-style', get_template_directory_uri() .'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts'), '1.1.1' );
 		
 		wp_deregister_script('jquery');
 		wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
@@ -89,7 +89,7 @@
 	/* PRINT LOGOS TO THE HEADER */
 	add_action('sp_sticky_logo', function(){
 		
-		$template = apply_filters('sp_sticky_logo_template', 'partials/logo.php');	
+		$template = apply_filters('sp_sticky_logo_template', 'partials/logo_sticky.php');	
 		
 		include( $template );
 		
@@ -139,7 +139,7 @@
 	} );
 
 
-	function sp_is_sticky_nav_transparent(){
+	function sp_is_sticky_nav_transparent(){ 
 	    global $post, $sp_customize;
 	    
 	    if( is_search() ){

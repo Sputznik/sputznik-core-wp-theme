@@ -49,7 +49,7 @@
 		<div class="modal-content">
 			<div class="modal-body">
 				<form method="GET" action="<?php bloginfo('url');?>">
-			        <input type="search" name="s" value="" placeholder="type keyword(s) here">
+			        <input type="search" name="s" value="" autocomplete="off" placeholder="type keyword(s) here">
 			        <button type="submit" class="btn btn-primary">Search</button>
 			    </form>
 			</div>

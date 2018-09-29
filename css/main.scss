@@ -143,18 +143,11 @@ body,html { height: 100%;}
 	}
 
 	.navbar-default{
-		transition:500ms ease;
-		background-color: transparent;
+		
+		
+		.navbar-brand{ color: #fff; }
 
-		.navbar-brand{
-	        color: #fff;
-	    }
-
-	    .navbar-nav>li>a {
-			color: #fff;
-			background-color: inherit;
-			border-bottom: 2px solid transparent;
-		}
+	    .navbar-nav>li>a { color: #fff; background-color: inherit; border-bottom: 2px solid transparent;}
 
 		.navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-nav>.active>a:hover{
 	        color: #fff;
@@ -197,46 +190,52 @@ body,html { height: 100%;}
     		}
     	}
     } 
-
+	
+	/* FOR TRANSPARENT MENU */
+	.navbar-default.sticky-transparent{
+	
+		transition:500ms ease;
+		background-color: transparent;
+		
+		@media( max-width: 768px ){
+			.navbar-collapse{
+				background: #000;
+				color: #fff;
+			}
+		}
+		
+		.logo-normal { display: block; }
+		.logo-sticky { display: none; }
+		
+		&.scrolled{
+			.logo-normal { display: none; }
+			.logo-sticky { display: block; }
+		}
+		
+	}
     
 
 
     /*****Override on Scroll****/
-    .navbar-default.sticky-solid, .scrolled{
+    .navbar-default.sticky-solid, .navbar-default.sticky-transparent.scrolled{
 
         background-color:#fff;
-
-        .desktop-logo {
-        	display: none;
-        }
-
-        .sticky-logo {
-        	display: block;
-        }
-
-        .navbar-nav { 
-
-        	.active>a, .active>a:focus, .active>a:hover{
-		        color: #000;
-		       
-		    }
-
-        	li, li.dropdown, li.dropdown:hover, li.dropdown:focus, li.dropdown:active  { 
-        		a {
-					color: #000;
-				}
+		
+		@media( min-width: 769px ){
+			
+			.navbar-nav { 
+				.active>a, .active>a:focus, .active>a:hover{ color: #000; }
+				li, li.dropdown, li.dropdown:hover, li.dropdown:focus, li.dropdown:active  { a { color: #000;} }
 			}
 
+			
 		}
-
+		
+		/* MENU ICON THAT HANDLES THE RESPONSIVE MENU */
 		.navbar-toggle {
-	    	border-color: #000;
-	    	
-	    	.icon-bar {
-    			background-color: #000;
-    		}	
-	    }
-
+			border-color: #000;
+			.icon-bar { background-color: #000; }	
+		}
     }
 
 }

@@ -3,6 +3,16 @@
 	
 	class SP_THEME{
 		
+		var $admin;
+		
+		function __construct(){
+			
+			// LOAD THE ADMIN CLASS THAT HAS ALL THE TAXONOMIES, POST TYPES AND CUSTOM META BOXES WITH THIER
+			// RESPECTIVE FIELDS
+			require_once('class-sp-theme-admin.php');
+			$this->admin = new SP_THEME_ADMIN;
+			
+		}
 		
 		function get_col_class( $cols = 4 ){
 			
