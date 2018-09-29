@@ -146,14 +146,21 @@ body,html { height: 100%;}
 		
 		
 		.navbar-brand{ color: #fff; }
-
+		
+		
+		
 	    .navbar-nav>li>a { color: #fff; background-color: inherit; border-bottom: 2px solid transparent;}
-
+		
+		
+		
+		
 		.navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-nav>.active>a:hover{
 	        color: #fff;
 	        border-color: #e7e7e7;
 	        background-color: inherit;
 	    }
+		
+		.navbar-nav li.sp_search_item.active a{ border: none;}
 
 	    .navbar-toggle {
 	    	border-color: #fff;

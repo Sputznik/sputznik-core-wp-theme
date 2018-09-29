@@ -160,13 +160,10 @@
 	}
 	
 
-	
-	add_filter( 'wp_nav_menu_items', 'sp_menu_search_link', 10, 2 );
-	
-	function sp_menu_search_link( $items, $args ){
+	// ENABLE SEARCH ICON ALONG WITH THE PRIMARY MENU
+	add_filter( 'wp_nav_menu_items', function($items, $args){
 		if( $args->theme_location == 'primary' ){
 	        $items .= '<li class="sp_search_item"><a href="#"><i class="fa fa-search" data-toggle="modal" data-target="#search-modal"></i></a></li>';
 	    }
-	    return $items;
-	}
-	
+		return $items;
+	}, 10, 2 );

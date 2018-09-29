@@ -90,6 +90,8 @@ body, html {
     color: #fff;
     border-color: #e7e7e7;
     background-color: inherit; }
+  .header3 .navbar-default .navbar-nav li.sp_search_item.active a {
+    border: none; }
   .header3 .navbar-default .navbar-toggle {
     border-color: #fff; }
     .header3 .navbar-default .navbar-toggle .icon-bar {
