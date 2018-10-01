@@ -182,6 +182,48 @@ body, html {
 
   .header3 ~ .container > .row > .search-content {
     margin-top: 20%; } }
+.sp-floating-icons {
+  position: fixed;
+  left: 0;
+  z-index: 100;
+  font-size: 18px;
+  /* DESKTOP STYLES */
+  /* MOBILE STYLES */ }
+  .sp-floating-icons ul {
+    margin-bottom: 0px;
+    /* override the margin being added from bootstrap */ }
+    .sp-floating-icons ul li a[href] {
+      background-color: #333;
+      color: #fff; }
+  @media (min-width: 769px) {
+    .sp-floating-icons {
+      top: 25%; }
+      .sp-floating-icons ul li {
+        width: auto !important; }
+        .sp-floating-icons ul li a[href] {
+          transition: all .2s ease-in-out;
+          display: block;
+          padding: 25px 10px 25px 15px; }
+        .sp-floating-icons ul li a[href]:hover {
+          transform: scale(1.2, 1); } }
+  @media (max-width: 768px) {
+    .sp-floating-icons {
+      width: 100%;
+      top: auto;
+      bottom: 0; }
+      .sp-floating-icons ul li {
+        display: inline-block;
+        margin-left: -2px;
+        margin-right: -3px; }
+      .sp-floating-icons ul li:first-child {
+        margin-left: 0px; }
+      .sp-floating-icons ul li a[href] {
+        width: 100%;
+        display: block;
+        text-align: center;
+        height: 45px;
+        padding-top: 12px; } }
+
 /******************************************/
 
 /*# sourceMappingURL=main.css.map */

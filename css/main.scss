@@ -131,9 +131,7 @@ body,html { height: 100%;}
 	.logo {
 		max-width: 200px;
 
-		img {
-			max-width: 100%;
-		}
+		img { max-width: 100%; }
 	}
 
 
@@ -144,15 +142,9 @@ body,html { height: 100%;}
 
 	.navbar-default{
 		
-		
 		.navbar-brand{ color: #fff; }
 		
-		
-		
-	    .navbar-nav>li>a { color: #fff; background-color: inherit; border-bottom: 2px solid transparent;}
-		
-		
-		
+		.navbar-nav>li>a { color: #fff; background-color: inherit; border-bottom: 2px solid transparent;}
 		
 		.navbar-nav>.active>a, .navbar-nav>.active>a:focus, .navbar-nav>.active>a:hover{
 	        color: #fff;
@@ -165,14 +157,10 @@ body,html { height: 100%;}
 	    .navbar-toggle {
 	    	border-color: #fff;
 	    	
-	    	.icon-bar {
-    			background-color: #fff;
-    		}	
+	    	.icon-bar { background-color: #fff; }	
 	    }
 
-	    .navbar-toggle:hover, .navbar-toggle:focus{
-	    	background-color: inherit;
-	    }
+	    .navbar-toggle:hover, .navbar-toggle:focus{ background-color: inherit; }
 
 	}
 
@@ -330,6 +318,7 @@ body,html { height: 100%;}
 }
 
 
+@import 'inc/floating-icons';
 
 
 

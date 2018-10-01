@@ -13,6 +13,13 @@
 		require_once( $inc_file );
 	}
 	
+	/* ADD SOW FROM THE THEME */
+	add_action('siteorigin_widgets_widget_folders', function( $folders ){
+		$folders[] = get_template_directory() . '/so-widgets/';
+		return $folders;
+	});
+	
+	
 	/* LOAD ASSETS */
 	add_action('wp_enqueue_scripts', function(){
 		
@@ -24,7 +31,7 @@
 		
 		wp_enqueue_style('google-fonts', $google_fonts_url, false, null );
 		
-		wp_enqueue_style( 'sp-core-style', get_template_directory_uri() .'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts'), '1.1.1' );
+		wp_enqueue_style( 'sp-core-style', get_template_directory_uri() .'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts'), '1.1.2' );
 		
 		wp_deregister_script('jquery');
 		wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);

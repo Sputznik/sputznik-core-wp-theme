@@ -38,11 +38,12 @@
 			return $col_class;
 		}
 		
+		function getUniqueID( $data ){
+			return substr( md5( json_encode( $data ) ), 0, 8 );
+		}
 		
 	}
 	
 	global $sp_theme;
 	
 	$sp_theme = new SP_THEME;
-	
-	
