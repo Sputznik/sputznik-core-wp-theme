@@ -19,6 +19,7 @@
 	<div id="<?php _e( 'icon-modal'.$icon_id );?>" class="modal fade" tabindex="-1" role="dialog">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
+				<!--button type="button" class="close">&times;</button-->
 				<div class="modal-body">
 					<?php echo siteorigin_panels_render( 'w'.$icon_id, true, $icon['modal_builder'] );?>
 				</div>
@@ -26,4 +27,4 @@
 		</div>
 	</div>		
 <?php endif; endforeach;?>
-<!-- END OF MODALS ICONS --> 
+<!-- END OF MODALS ICONS -->
