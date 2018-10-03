@@ -8,8 +8,8 @@
 
 			$option = $sp_customize->get_option();
 
-			$footer_cols = $option['footer']['column'];	
-			
+			$footer_cols = isset( $option['footer']['column'] ) ? $option['footer']['column'] : 4;	
+						
 			for( $i = 1; $i<=$footer_cols; $i++ ){
 				
 				$footer_col_class = $sp_theme->get_col_class( $footer_cols );
