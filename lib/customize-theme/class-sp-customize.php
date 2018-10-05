@@ -100,8 +100,6 @@
     		)));
 			
 			
-			
-			
 		}
 		
 		function checkbox( $wp_customize, $section, $id, $label ){
