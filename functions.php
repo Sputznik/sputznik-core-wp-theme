@@ -19,6 +19,12 @@
 		return $folders;
 	});
 	
+	/* ADD PREDEFINED LAYOUTS */
+	add_filter( 'siteorigin_panels_local_layouts_directories', function( $layout_folders ){
+		$layout_folders[] = get_template_directory() . '/lib/layouts';
+		return $layout_folders;
+	} );
+
 	
 	/* LOAD ASSETS */
 	add_action('wp_enqueue_scripts', function(){

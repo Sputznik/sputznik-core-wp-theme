@@ -43,7 +43,7 @@ class SP_Float_Icons extends SiteOrigin_Widget {
 						'is_modal' => array(
 							'type' => 'checkbox',
 							'label' => __( 'Open Modal Box', 'siteorigin-widgets' ),
-							'default' => true,
+							'default' => false,
 							'state_emitter' => array(
 								'callback' 	=> 'conditional',
 								'args' 		=> array( 
@@ -54,7 +54,7 @@ class SP_Float_Icons extends SiteOrigin_Widget {
 						),
 						'modal_builder' => array(
 							'type' => 'builder',
-							'label' => __( 'Modal Content', 'widget-form-fields-text-domain'),
+							'label' => __( 'Modal Content', 'siteorigin-widgets'),
 							'state_handler' => array(
 								'type_{$repeater}[active]' 	=> array('show'),
 								'_else[type_{$repeater}]' 	=> array('hide'),
