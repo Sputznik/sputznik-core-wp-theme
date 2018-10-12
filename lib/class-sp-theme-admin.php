@@ -43,6 +43,7 @@
 					'fields'	=> array(
 						'sticky_transparent' => array(
 							'label'		=> 'Transparent Header',
+							'desc'		=> 'Only works for Sticky Transparent Menu',
 							'type'		=> 'boolean',
 							'default'	=> false
 						),
@@ -127,8 +128,6 @@
 			if( !is_array( $metaboxes ) || !isset( $metaboxes[ $slug ] ) ){ return ;}
 			$fields = $metaboxes[ $slug ][ 'fields' ];
 			
-			_e('<table>');
-			
 			// ITERATING THROUGH EACH FIELD
 			foreach( $fields as $slug => $field ){
 				
@@ -155,7 +154,7 @@
 					include "templates/metafield_text.php";
 				}
 			}
-			_e('</table>');
+			
 		}
 		
 		/* SAVE META BOXES */
