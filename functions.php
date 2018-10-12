@@ -6,13 +6,15 @@
 		'lib/customize-theme/main.php',
 		'lib/google-fonts.php',
 		'lib/the.php',
-		
 	);
 	
 	foreach($inc_files as $inc_file){
 		require_once( $inc_file );
 	}
 	
+	/* THEME SUPPORT FOR FEATURED IMAGES */
+	add_theme_support( 'post-thumbnails' );	
+		
 	/* ADD SOW FROM THE THEME */
 	add_action('siteorigin_widgets_widget_folders', function( $folders ){
 		$folders[] = get_template_directory() . '/so-widgets/';
