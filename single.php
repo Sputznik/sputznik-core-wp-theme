@@ -15,6 +15,10 @@
 				<span class="pull-right"><?php next_post_link("%link", "Next &raquo;"); ?></span>
 			</div>
 			<?php endwhile;endif;?>
+			
+			<?php if( is_active_sidebar( 'single-post-footer' ) ){ dynamic_sidebar( 'single-post-footer' ); }?>
+			
+			
 		</div>
 	</div>
 </div>
@@ -22,6 +26,7 @@
 <style>
 	#content{
 		margin-top: 100px !important;
+		margin-bottom: 100px;
 	}
 	@media( min-width:769px ){
 		.single-featured-image{
