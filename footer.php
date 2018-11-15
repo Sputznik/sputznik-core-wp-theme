@@ -1,4 +1,4 @@
-<?php do_action('sp_pre_footer');?>
+<div class='container'><?php do_action('sp_pre_footer');?></div>
 <footer>
 	<div class="container-fluid">
 		<div class="row">
