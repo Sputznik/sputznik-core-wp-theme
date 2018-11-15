@@ -112,7 +112,7 @@
 	
 	
 	add_action( 'widgets_init', function(){
-		
+		/*
 		register_sidebar( array(
 			'name' => 'Footer Sidebar 1',
 			'id' => 'footer-sidebar-1',
@@ -149,7 +149,7 @@
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>',
 		) );
-		
+		*/
 		register_sidebar( array(
 			'name' 			=> 'Pre Footer',
 			'id' 			=> 'pre-footer-sidebar',

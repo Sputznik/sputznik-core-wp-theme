@@ -3,7 +3,7 @@
 	<div class="container-fluid">
 		<div class="row">
 		<?php 
-			
+			/*
 			global $sp_theme, $sp_customize;
 
 			$option = $sp_customize->get_option();
@@ -18,6 +18,7 @@
 				if( is_active_sidebar( 'footer-sidebar-'.$i ) ){ dynamic_sidebar( 'footer-sidebar-'.$i ); }
 				_e('</div>');
 			}
+			*/
 		?>
 		</div>
 	</div>
