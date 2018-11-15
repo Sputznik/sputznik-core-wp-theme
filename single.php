@@ -7,7 +7,7 @@
 			<div class='single-featured-image'>
 				<?php the_post_thumbnail('medium_large');?>
 			</div>
-			<h1 class="post-title text-left"><strong><?php the_title(); ?></strong></h1>
+			<h1 class="post-title text-left"><?php the_title(); ?></h1>
 			<div class='author-info text-muted'>By <?php the_author();?> on <?php the_date();?></div>
 			<?php the_content(); ?>
 			<div class="post-nav">
