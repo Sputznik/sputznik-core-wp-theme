@@ -4,6 +4,9 @@ a[href] {
 body, html {
   height: 100%; }
 
+body.with-header3.with-solid-menu #content {
+  margin-top: 50px; }
+
 .fixed-col {
   max-width: 1200px;
   padding: 50px 15px;
@@ -44,9 +47,6 @@ body, html {
       line-height: 1em; }
   #search-modal .modal-dialog {
     max-width: 600px; }
-
-#content.with-header3.solid-menu {
-  margin-top: 50px; }
 
 @media (min-width: 769px) {
   /* KEEP THE SUBMENU OPEN ON HOVER OF LIST ITEM */

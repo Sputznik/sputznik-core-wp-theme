@@ -4,6 +4,18 @@ a[href]{
 
 body,html { height: 100%;}
 
+
+body.with-header3.with-solid-menu{
+		
+	#content{
+		margin-top: 50px;
+	}
+	
+}
+
+
+
+
 .fixed-col { 
 	max-width: 1200px; 
 	padding: 50px 15px; 
@@ -59,9 +71,7 @@ body,html { height: 100%;}
 	}
 }
 
-#content.with-header3.solid-menu{
-	margin-top: 50px;
-}
+
 
 
 @import 'inc/header';
