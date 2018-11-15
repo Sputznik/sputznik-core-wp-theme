@@ -31,6 +31,9 @@
 	article.single-post{
 		margin-bottom: 100px;
 	}
+	article.single-post .post-nav{
+		display: none;
+	}
 	#content{
 		margin-top: 100px !important;
 	}
