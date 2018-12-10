@@ -19,6 +19,9 @@
 			/* SAVE POST - FOR SAVING META FIELDS */
 			add_action( 'save_post', array( $this, 'save_meta_fields' ), 10, 2 );
 			
+			
+			add_action( 'admin_enqueue_scripts', array( $this, 'assets' ) );
+			
 		}
 		
 		/* SET POST TYPES */
@@ -192,6 +195,10 @@
 				
 			}
 			
+		}
+		
+		function assets(){
+			wp_enqueue_style( 'sp-fonts', get_template_directory_uri() .'/css/fonts.css', array(), '1.0.1' );
 		}
 		
 		
