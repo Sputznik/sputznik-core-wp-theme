@@ -1,5 +1,7 @@
 <?php
-	
+
+	define('SPUTZNIK_THEME_VERSION','1.1.6');
+
 	$inc_files = array(
 		'lib/class-sp-theme.php',
 		'lib/wp-bootstrap-navwalker.php',
@@ -7,12 +9,12 @@
 		'lib/google-fonts.php',
 		'lib/the.php',
 	);
-	
+
 	foreach($inc_files as $inc_file){
 		require_once( $inc_file );
 	}
-	
-	
+
+
 	function my_icon_families_filter( $icon_families ) {
 		$icon_families['spicons'] = array(
 			'name' 		=> 'Sputznik Icons',
@@ -24,26 +26,26 @@
 		return $icon_families;
 	}
 	add_filter( 'siteorigin_widgets_icon_families', 'my_icon_families_filter' );
-	
-	
+
+
 	/* THEME SUPPORT FOR FEATURED IMAGES */
-	add_theme_support( 'post-thumbnails' );	
-		
+	add_theme_support( 'post-thumbnails' );
+
 	/* ADD SOW FROM THE THEME */
 	add_action('siteorigin_widgets_widget_folders', function( $folders ){
 		$folders[] = get_template_directory() . '/so-widgets/';
 		return $folders;
 	});
-	
+
 	/* ADD PREDEFINED LAYOUTS */
 	add_filter( 'siteorigin_panels_local_layouts_directories', function( $layout_folders ){
 		$layout_folders[] = get_template_directory() . '/lib/layouts';
 		return $layout_folders;
 	} );
 
-	
-	
-	
+
+
+
 	/** registering nav menu */
 	add_action( 'init', function(){
 		register_nav_menus( array(
@@ -51,25 +53,25 @@
 			'secondary' => __( 'Secondary Menu', 'SPUTZNIK' )
 		) );
 	} );
-	
+
 	/* HIDE ADMIN BAR FROM THE FRONTEND */
 	add_filter('show_admin_bar', '__return_false');
-	
+
 	/* ADD HEADER */
 	add_action('sp_header', function(){
 		global $sp_customize;
-		
+
 		$header_type = $sp_customize->get_header_type();
-		
+
 		$header_template = apply_filters( 'sp_'.$header_type.'_template', 'partials/headers/'.$sp_customize->get_header_type().'.php' );
-		
+
 		require_once( $header_template );
-		
+
 	});
-	
+
 	/* HEADER MENU */
 	add_action('sp_nav_menu', function(){
-		
+
 		$sp_nav_menu_options = apply_filters( 'sp_nav_menu_options', array(
 			'menu'              => 'primary',
 			'theme_location'    => 'primary',
@@ -81,32 +83,32 @@
 			'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 			'walker'            => new wp_bootstrap_navwalker()
 		));
-		
+
 		wp_nav_menu( $sp_nav_menu_options );
-		
+
 	});
-	
+
 	/* PRINT LOGOS TO THE HEADER */
 	add_action('sp_logo', function(){
-		
-		$template = apply_filters('sp_logo_template', 'partials/logo.php');	
-		
+
+		$template = apply_filters('sp_logo_template', 'partials/logo.php');
+
 		include( $template );
-		
+
 	}, 1);
-	
+
 	/* PRINT LOGOS TO THE HEADER */
 	add_action('sp_sticky_logo', function(){
-		
-		$template = apply_filters('sp_sticky_logo_template', 'partials/logo_sticky.php');	
-		
+
+		$template = apply_filters('sp_sticky_logo_template', 'partials/logo_sticky.php');
+
 		include( $template );
-		
+
 	}, 1);
-	
-	
+
+
 	add_action( 'widgets_init', function(){
-		
+
 		// built for jagori
 		register_sidebar( array(
 			'name' 			=> 'Single Post Footer',
@@ -117,9 +119,9 @@
 			'before_title' 	=> '<h3 class="widget-title">',
 			'after_title' 	=> '</h3>',
 		) );
-		
+
 		/*
-		
+
 		register_sidebar( array(
 			'name' => 'Footer Sidebar 2',
 			'id' => 'footer-sidebar-2',
@@ -161,26 +163,26 @@
 	} );
 
 
-	function sp_is_sticky_nav_transparent(){ 
+	function sp_is_sticky_nav_transparent(){
 	    global $post, $sp_customize;
-	    
+
 	    if( is_search() ){
 	    	return 0;
 	    }
 
 	    $option = $sp_customize->get_option();
-	    
+
 	    if ( isset($option['header_type']) && $option['header_type'] === 'header3' ) {
-	    	
-	    	$val = get_post_meta( $post->ID, $key = 'sticky_transparent', true ); 
-	    	
+
+	    	$val = get_post_meta( $post->ID, $key = 'sticky_transparent', true );
+
 	    	return isset($val) ? (bool)$val : 0;
 	    }
-		
 
-	    return 0; 
+
+	    return 0;
 	}
-	
+
 
 	// ENABLE SEARCH ICON ALONG WITH THE PRIMARY MENU
 	add_filter( 'wp_nav_menu_items', function($items, $args){
@@ -192,10 +194,9 @@
 
 
 	add_action( 'sp_pre_footer', function(){
-		
-		if( is_active_sidebar( 'pre-footer-sidebar' ) ){ 
-			dynamic_sidebar( 'pre-footer-sidebar' ); 
+
+		if( is_active_sidebar( 'pre-footer-sidebar' ) ){
+			dynamic_sidebar( 'pre-footer-sidebar' );
 		}
 
 	} );
-	
