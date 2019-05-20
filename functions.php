@@ -1,5 +1,7 @@
 <?php
 
+	define('SPUTZNIK_THEME_VERSION','1.1.6');
+
 	$inc_files = array(
 		'lib/class-sp-theme.php',
 		'lib/wp-bootstrap-navwalker.php',
