@@ -59,7 +59,7 @@ body.with-header3.with-solid-menu #content {
   padding: 10px 20px; }
 .header1 .affix-top, .header1 .affix {
   width: 100%;
-  z-index: 2;
+  z-index: 999;
   background: white;
   min-height: 55px; }
   .header1 .affix-top .logo, .header1 .affix .logo {
