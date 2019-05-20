@@ -212,6 +212,10 @@
 
     global $page, $paged;
 
+		if( is_front_page() ){
+			$title = "Home";
+		}
+
     // Add the blog name
     $title = $title . $sep . get_bloginfo( 'name', 'display' );
 
