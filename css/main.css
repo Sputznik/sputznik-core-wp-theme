@@ -13,6 +13,18 @@ body.with-header3.with-solid-menu #content {
   margin-left: auto;
   margin-right: auto; }
 
+body.single-post img.alignleft {
+  float: left;
+  margin: 0 20px 20px 0; }
+
+body.single-post img.alignright {
+  float: right;
+  margin: 0 0 20px 20px; }
+
+body.single-post img.aligncenter {
+  display: block;
+  margin: 0 auto; }
+
 #search-modal {
   background: rgba(0, 0, 0, 0.9); }
   #search-modal .modal-dialog {
