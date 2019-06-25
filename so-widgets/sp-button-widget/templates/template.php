@@ -1,7 +1,7 @@
 <?php
 	global $sp_theme;
 
-	
+
 	if( isset( $instance['text'] ) ):
 
 		$widget_id = $sp_theme->getUniqueID( $instance );
@@ -23,6 +23,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
 				<?php echo siteorigin_panels_render( 'w'.$widget_id, true, $instance['modal_builder'] );?>
 			</div>
 		</div>
