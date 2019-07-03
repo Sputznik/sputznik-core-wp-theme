@@ -122,7 +122,6 @@
 }
 
 /* Header 4 */
-
 .header4 img.desktop-logo{
   max-width: 230px;
   height: auto;
@@ -155,9 +154,6 @@
   .header4 .navbar-toggle:hover{
     background-color: transparent
   }
-  .header4 .navbar-toggle .icon-bar{
-
-  }
 
   /* When a link is active */
   .header4 .navbar-nav > .active > a{
@@ -170,6 +166,7 @@
 		min-height: 200px;
 		background-color: transparent;
 		border:none;
+    margin-bottom: 50px;
 	}
 
   .header4 .navbar-header{
@@ -182,18 +179,23 @@
 		height: auto;
 	}
 
+  .header4 .logo-normal{
+    min-height: 170px;
+  }
+
 	.header4 img{
 		margin-left: auto;
 		margin-right: auto;
 	}
+  .header4 .navbar-collapse{
+    padding: 0;
+  }
+
 	.header4 .nav{
   	border-top: 1px solid #eee;
   	border-bottom: 1px solid #eee;
   	float: none;
-  	margin-left: auto;
-  	margin-right: auto;
   	text-align: center;
-  	max-width: 700px;
 	}
 	.header4 .nav > li {
 		float: none;
