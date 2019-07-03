@@ -28,6 +28,7 @@
 			'header1' => 'Default',
 			'header2' => 'Left Logo & Right Menu',
 			'header3' => 'Sticky Transparent Menu',
+			'header4'	=> 'Centralized Logo & Menu '
 		) );
 
     	$sp_customize->dropdown( $wp_customize, 'sp_logo_section', '[header_type]', 'Header Type', 'header1', $headers_arr);
@@ -54,6 +55,12 @@
 			$sp_nav_menu_options['container_class'] = 'navbar-collapse collapse';
 			$sp_nav_menu_options['container_id']    = 'bs-example-navbar-collapse-1';
 			$sp_nav_menu_options['menu_class']      = 'nav navbar-nav navbar-right';
+		}
+
+		if( $header_type == 'header4' ){
+			$sp_nav_menu_options['container_class'] = 'navbar-collapse collapse';
+			$sp_nav_menu_options['container_id']    = 'bs-example-navbar-collapse-1';
+			$sp_nav_menu_options['menu_class']      = 'nav navbar-nav';
 		}
 
 
