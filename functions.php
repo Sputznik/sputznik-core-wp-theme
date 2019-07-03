@@ -1,6 +1,6 @@
 <?php
 
-	define('SPUTZNIK_THEME_VERSION', '1.1.7' );
+	define('SPUTZNIK_THEME_VERSION', '1.1.8' );
 
 	$inc_files = array(
 		'lib/class-sp-theme.php',
@@ -235,6 +235,6 @@
 
 	add_action( 'paginationWithThumbnail', function(){
 
-		
+
 
 	} );

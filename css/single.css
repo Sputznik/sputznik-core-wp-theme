@@ -120,3 +120,88 @@
   padding: 10px 15px;
 
 }
+
+/* Header 4 */
+
+.header4 img.desktop-logo{
+  max-width: 230px;
+  height: auto;
+}
+@media( max-width: 768px ) {
+
+  .header4 .navbar-header{
+    background-color: #fff;
+  }
+  /* Logo */
+  .header4 .navbar-header .visible-xs{
+    max-width: 89px;
+  }
+
+  .header4 .navbar-brand{
+    padding: 0;
+  }
+  /* Header background */
+  .header4 .navbar-collapse{
+    background-color: #fff;
+  }
+  .header4 .navbar-nav{
+    margin: 0 -15px;
+  }
+  /* Toggler */
+  .header4 .navbar-toggle{
+    background-color: transparent;
+    border: none;
+  }
+  .header4 .navbar-toggle:hover{
+    background-color: transparent
+  }
+  .header4 .navbar-toggle .icon-bar{
+
+  }
+
+  /* When a link is active */
+  .header4 .navbar-nav > .active > a{
+    color: #000;
+    background-color: #fff;
+  }
+}
+@media( min-width: 768px ){
+	.header4.navbar-default{
+		min-height: 200px;
+		background-color: transparent;
+		border:none;
+	}
+
+  .header4 .navbar-header{
+    float: none;
+  }
+
+	.header4 .navbar-brand{
+		float: none;
+		padding: 0;
+		height: auto;
+	}
+
+	.header4 img{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.header4 .nav{
+  	border-top: 1px solid #eee;
+  	border-bottom: 1px solid #eee;
+  	float: none;
+  	margin-left: auto;
+  	margin-right: auto;
+  	text-align: center;
+  	max-width: 700px;
+	}
+	.header4 .nav > li {
+		float: none;
+		display: inline-block;
+	}
+	.header4.navbar-default .nav > .active > a{
+		background-color: transparent;
+		color: #000;
+	}
+
+}
