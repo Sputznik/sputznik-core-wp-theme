@@ -188,10 +188,12 @@
 	add_filter( 'wp_nav_menu_items', function($items, $args){
 		if( $args->theme_location == 'primary' ){
 	        $items .= '<li class="sp_search_item"><a href="#"><i class="fa fa-search" data-toggle="modal" data-target="#search-modal"></i></a></li>';
+					$items .= '<li class="sp_cart_item"><a href=""><i class="fa fa-cart"></i></a></li>';
 	    }
 		return $items;
 	}, 10, 2 );
 
+	/*
 	// ENABLE CART ICON ALONG WITH THE PRIMARY MENU
 	//if ( class_exists( 'WooCommerce' ) ) {
 		add_filter( 'wp_nav_menu_items', function($items, $args){
@@ -202,6 +204,7 @@
 			return $items;
 		}, 11, 2 );
 	//}
+	*/
 
 	add_action( 'sp_pre_footer', function(){
 
