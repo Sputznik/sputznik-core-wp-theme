@@ -193,14 +193,15 @@
 	}, 10, 2 );
 
 	// ENABLE CART ICON ALONG WITH THE PRIMARY MENU
-	if ( class_exists( 'WooCommerce' ) ) {
+	//if ( class_exists( 'WooCommerce' ) ) {
 		add_filter( 'wp_nav_menu_items', function($items, $args){
+			//get_permalink( wc_get_page_id( 'cart' ) )
 			if( $args->theme_location == 'primary' ){
-		        $items .= '<li class="sp_cart_item"><a href="'.get_permalink( wc_get_page_id( 'cart' ) ).'"><i class="fa fa-cart"></i></a></li>';
+		        $items .= '<li class="sp_cart_item"><a href=""><i class="fa fa-cart"></i></a></li>';
 		    }
 			return $items;
 		}, 11, 2 );
-	}
+	//}
 
 	add_action( 'sp_pre_footer', function(){
 
