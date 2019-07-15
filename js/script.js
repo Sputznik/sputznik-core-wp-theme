@@ -9,7 +9,7 @@ $.fn.smooth_scroll = function( options ) {
 
 			var $target = $el.getTarget();
 
-			if( $target.length ) {
+			if( $target.length && !$target.is( ':hidden' ) ) {
 				return true;
 			}
 
