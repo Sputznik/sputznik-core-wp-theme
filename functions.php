@@ -186,13 +186,20 @@
 
 	// ENABLE SEARCH ICON ALONG WITH THE PRIMARY MENU
 	add_filter( 'wp_nav_menu_items', function($items, $args){
-		if( $args->theme_location == 'primary' ){
-	        $items .= '<li class="sp_search_item"><a href="#"><i class="fa fa-search" data-toggle="modal" data-target="#search-modal"></i></a></li>';
 
-					if ( class_exists( 'WooCommerce' ) ) {
-						$items .= '<li class="sp_cart_item"><a href="'.get_permalink( wc_get_page_id( 'cart' ) ).'"><i class="fa fa-shopping-cart"></i><strong class="header-cart-count">'.WC()->cart->get_cart_contents_count().'</strong></a></li>';
-					}
-	    }
+		global $sp_customize;
+
+		$option = $sp_customize->get_option();
+
+		if( $args->theme_location == 'primary' ){
+			if( isset( $option['has_search_icon'] ) &&  $option['has_search_icon'] == 1 ){
+				$items .= '<li class="sp_search_item"><a href="#"><i class="fa fa-search" data-toggle="modal" data-target="#search-modal"></i></a></li>';
+			}
+			if( isset( $option['has_cart_icon'] ) &&  $option['has_cart_icon'] == 1 && class_exists( 'WooCommerce' ) ){
+				$items .= '<li class="sp_cart_item"><a href="'.get_permalink( wc_get_page_id( 'cart' ) ).'"><i class="fa fa-shopping-cart"></i><strong class="header-cart-count">'.WC()->cart->get_cart_contents_count().'</strong></a></li>';
+			}
+
+		}
 		return $items;
 	}, 10, 2 );
 

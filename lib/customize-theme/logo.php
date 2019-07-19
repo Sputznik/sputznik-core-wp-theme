@@ -33,6 +33,10 @@
 
     	$sp_customize->dropdown( $wp_customize, 'sp_logo_section', '[header_type]', 'Header Type', 'header1', $headers_arr);
 
+			$sp_customize->checkbox( $wp_customize, 'sp_logo_section', '[has_search_icon]', 'Has Search Icon' );
+
+			$sp_customize->checkbox( $wp_customize, 'sp_logo_section', '[has_cart_icon]', 'Has Cart Icon' );
+
 	});
 
 	/* CHANGE THE ATTRIBUTES PASSED TO THE NAVIGATION MENU */
