@@ -77,7 +77,7 @@
 
 			wp_enqueue_style( 'sp-core-style', get_template_directory_uri() .'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts'), SPUTZNIK_THEME_VERSION );
 
-			wp_enqueue_style( 'single-post-style', get_template_directory_uri() .'/css/single.css', array(), SPUTZNIK_THEME_VERSION );
+			wp_enqueue_style( 'extras', get_template_directory_uri() .'/css/extras.css', array(), SPUTZNIK_THEME_VERSION );
 
 			wp_enqueue_style( 'sp-fonts', get_template_directory_uri() .'/css/fonts.css', array('sp-core-style'), SPUTZNIK_THEME_VERSION );
 

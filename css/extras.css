@@ -207,3 +207,15 @@
 	}
 
 }
+
+/* WOOCOMMERCE HEADER CART COUNT */
+strong.header-cart-count{
+  color           : #FFF;
+  background-color: #77A464;
+  padding         : 1px 6px;
+  line-height     : 0;
+  vertical-align  : top;
+  border-radius   : 10px;
+  font-weight     : normal;
+  font-size       : 80%;
+}
