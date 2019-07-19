@@ -190,11 +190,17 @@
 	        $items .= '<li class="sp_search_item"><a href="#"><i class="fa fa-search" data-toggle="modal" data-target="#search-modal"></i></a></li>';
 
 					if ( class_exists( 'WooCommerce' ) ) {
-						$items .= '<li class="sp_cart_item"><a href="'.get_permalink( wc_get_page_id( 'cart' ) ).'"><i class="fa fa-shopping-cart"></i></a></li>';
+						$items .= '<li class="sp_cart_item"><a href="'.get_permalink( wc_get_page_id( 'cart' ) ).'"><i class="fa fa-shopping-cart"></i><div class="header-cart-count">'.WC()->cart->get_cart_contents_count().'</div></a></li>';
 					}
 	    }
 		return $items;
 	}, 10, 2 );
+
+	// WOOCOMMERCE UPDATE CART COUNT ON AJAX
+	add_filter( 'woocommerce_add_to_cart_fragments', function( $fragments ){
+		$fragments['div.header-cart-count'] = '<div class="header-cart-count">' . WC()->cart->get_cart_contents_count() . '</div>';
+		return $fragments;
+	}, 10, 1 );
 
 
 
