@@ -8,7 +8,8 @@
 				<?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
 				<div style="margin-bottom: 30px;">
 					<h2 class='orbit-title'><a href='<?php the_permalink();?>'><?php the_title();?></a></h2>
-					<div class='orbit-excerpt'><?php the_excerpt();?></div>
+					<?php $excerpt = get_the_excerpt();?>
+					<?php if( $excerpt ): ?><div class='orbit-excerpt'><?php _e( $excerpt );?></div><?php endif;?>
 					<a class='orbit-btn' href='<?php the_permalink();?>'>Continue Reading</a>
 				</div>
 				<?php endwhile;?>
