@@ -50,16 +50,19 @@
 			);
 		}
 
-		function get_header_type(){
-
+		function get_one_option( $slug, $default ){
 			$option = $this->get_option();
 
-			if( isset( $option['header_type'] ) && $option['header_type'] ){
-				return $option['header_type'];
+			if( isset( $option[ $slug ] ) && $option[ $slug ] ){
+				return $option[ $slug ];
 			}
 
-			return 'header1';
+			return $default;
 		}
+
+		function get_single_template(){ return $this->get_one_option( 'single_template', 'single1' ); }
+		
+		function get_header_type(){ return $this->get_one_option( 'header_type', 'header1' ); }
 
 		function panel( $wp_customize, $id, $label){
 
