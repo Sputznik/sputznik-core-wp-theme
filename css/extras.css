@@ -38,7 +38,7 @@
 
 
 /* COMMENTS */
-.entry-comments, .entry-post-nav{
+.entry-comments, .entry-post-nav, .narrow-col{
   max-width: 600px;
   margin: 50px auto;
 }
