@@ -103,22 +103,10 @@
    font-weight: 900;
 }
 
-
- /* .single-template-2 .post-content > .post-tags >  a::before {
-   display: inline-block;
-   font-style: normal;
-   font-variant: normal;
-   text-rendering: auto;
-   -webkit-font-smoothing: antialiased;
- } */
-
- /* Step 2: Reference Individual Icons */
- /* .single-template-2 .post-content > .post-tags >  a::before {
-   font-family: "Font Awesome 5 Free";
-   font-weight: 900;
-   content: "\f007";
- } */
-
+.single-template-2 .comment-reply-title{
+  padding-top: 0;
+  border: none;
+}
 
 @media( max-width: 767px ){
   .single-template-2 .post-content, .single-template-2 .space{
@@ -131,11 +119,8 @@
   .single-template-2 .space{
     padding-top: 5px;
   }
-  .entry-comments{
+  .single-template-2 .entry-comments{
     margin-top: 10px;
-  }
-  .comment-reply-title{
-    padding-top: 0;
   }
 }
  /* @media( min-width: 769px ){
