@@ -73,7 +73,7 @@
   margin-bottom: 10px;
 }
 #comments, .comment-reply-title{
-  /* border-top: 4px solid #1a1a1a; */
+  border-top: 4px solid #1a1a1a;
   padding-top: 30px;
   font-weight: bold;
 }
@@ -206,6 +206,13 @@
 		color: #000;
 	}
 
+}
+
+/* AUTHOR BOX */
+.entry-author.author-box .author-info{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-gap: 20px;
 }
 
 /* WOOCOMMERCE HEADER CART COUNT */

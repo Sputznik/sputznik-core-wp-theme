@@ -10,8 +10,8 @@ add_action('customize_register', function( $wp_customize ){
   /** SINGLE POST TYPE TEMPLATES */
   $templates_arr = apply_filters( 'sp_single_template_options', array(
     'single1' => 'Default',
-    'single2' => 'Template 2',
-    //'template3' => 'Template 3',
+    'single2' => 'Overlay featured image',
+    'single3' => 'Blog Post',
     //'template4'	=> 'Template 4'
   ) );
 
