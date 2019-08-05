@@ -227,5 +227,17 @@ strong.header-cart-count{
   font-size       : 80%;
 }
 .orbit-three-grid .orbit-article-db{
-  border: none;
+  border: none !important;
+}
+.orbit-three-grid .orbit-content hr{
+  background-color:#686868;
+  height:1px;
+  max-width:50%;
+  margin-left:0;
+  border: none !important;
+}
+.orbit-three-grid .orbit-content > p{
+  color: #8c8c8c;
+  margin-bottom:20px;
+  font-size:16px;
 }
