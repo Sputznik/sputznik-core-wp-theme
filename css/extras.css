@@ -226,3 +226,6 @@ strong.header-cart-count{
   font-weight     : normal;
   font-size       : 80%;
 }
+.orbit-three-grid .orbit-article-db{
+  border: none;
+}

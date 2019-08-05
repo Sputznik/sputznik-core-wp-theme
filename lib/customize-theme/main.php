@@ -6,7 +6,9 @@
 		'social_media.php',
 		'background.php',
 		'fonts.php',
-		'post-single.php',
+		'single-post.php',
+		'taxonomy.php',
+		'archive.php',
 		'footer.php'
 	);
 

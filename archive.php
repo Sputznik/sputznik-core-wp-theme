@@ -1,20 +1,22 @@
 <?php get_header();?>
-<?php global $post_type;?>
-	<div class="container">
-		<div class="row">
-			<div class='col-sm-12'>
-				<h2 style="text-transform: capitalize;"><?php _e( $post_type );?></h2>
-				<br>
-				<?php if (have_posts()) : ?>
-				<ul class='orbit-three-grid' style='margin-bottom:50px; padding-left: 0;'>
-					<?php while (have_posts()) : the_post(); ?>
-					<li class="orbit-article-db orbit-list-db">
-						<?php get_template_part('partials/post', 'common');?>
-					</li>
-					<?php endwhile; ?>
-				</ul>
-				<?php endif; ?>			
-			</div>
-		</div>
-	</div>
+<?php
+
+	global $post_type;
+
+	if( $post_type ){
+		$archive_template = apply_filters( 'sp_'.$sp_customize->get_archive_template( $post_type ).'_template', 'partials/archives/'.$sp_customize->get_archive_template( $post_type ).'.php' );
+		require_once( $archive_template );
+	}
+	else{
+
+		$term = $wp_query->get_queried_object();
+
+		$taxonomy = $term->taxonomy;
+
+		$taxonomy_template = apply_filters( 'sp_'.$sp_customize->get_taxonomy_template( $taxonomy ).'_template', 'partials/taxonomies/'.$sp_customize->get_taxonomy_template( $taxonomy ).'.php' );
+
+		require_once( $taxonomy_template );
+
+	}
+?>
 <?php get_footer();?>

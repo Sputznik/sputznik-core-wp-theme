@@ -60,8 +60,12 @@
 			return $default;
 		}
 
-		function get_single_template(){ return $this->get_one_option( 'single_template', 'single1' ); }
-		
+		function get_archive_template( $post_type = 'post' ){ return $this->get_one_option( "archive_".$post_type."_template", 'archive1' ); }
+
+		function get_taxonomy_template( $taxonomy = 'post_tag' ){ return $this->get_one_option( "tax_".$taxonomy."_template", 'tax1' ); }
+
+		function get_single_template( $post_type = 'post' ){ return $this->get_one_option( "single_".$post_type."_template", 'single1' ); }
+
 		function get_header_type(){ return $this->get_one_option( 'header_type', 'header1' ); }
 
 		function panel( $wp_customize, $id, $label){
