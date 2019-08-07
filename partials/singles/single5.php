@@ -48,6 +48,7 @@
           }
         ?>
         <hr>
+        <div class="post-thumbnail"><?php _e( do_shortcode( '[orbit_thumbnail size="full"]' ) );?></div>
         <?php the_content('Read the rest of this entry »'); ?>
         <hr>
         <p class="small"><strong>Spread the word:</strong><p>
