@@ -208,10 +208,18 @@
 
 				// CHECK IF THIS METABOX IS VALID FOR THE CURRENT SCREEN
 				if( isset( $metabox['post_type'] ) ){
-					if( ( is_array( $metabox['post_type'] ) && in_array( $metabox['post_type'], array( $post->post_type ) ) ) || ( $metabox['post_type'] == $post->post_type ) ){
-						$flag = true;
+
+					// Iterate through all the post types in the metabox['post_type'] array
+					foreach ( $metabox['post_type'] as $slug ) {
+
+						if( ( is_array( $metabox['post_type'] ) && in_array( $slug,  array( $post->post_type )  ) ) || ( $metabox['post_type'] == $post->post_type ) ){
+
+							$flag = true;
+
+						}
 					}
 				}
+
 
 				if( $flag ){
 
