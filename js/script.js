@@ -1,8 +1,8 @@
-$.fn.smooth_scroll = function( options ) {
+jQuery.fn.smooth_scroll = function( options ) {
 
 	return this.each(function() {
 
-		var $el = $(this);
+		var $el = jQuery(this);
 
 		// CHECK IF TARGET EXISTS WITHIN THE BODY
 		$el.isTargetValid = function(){
@@ -27,21 +27,21 @@ $.fn.smooth_scroll = function( options ) {
 		// RETURN TARGET ELEMENT
 		$el.getTarget = function(){
 			var hash = $el.parseURL( $el.attr( 'href' ) ).hash;
-			return $('body').find( hash );
+			return jQuery('body').find( hash );
 		};
 
 
 		$el.on( 'click', function( event ) {
 
 			//removes smooth scroll if data-toggle=modal
-			if ( !( $(this).attr('data-toggle') == 'modal' ) ) {
+			if ( !( jQuery(this).attr('data-toggle') == 'modal' ) ) {
 
 				if( $el.isTargetValid() ){
 
 					event.preventDefault();
-					$('.modal').modal('hide');
+					jQuery('.modal').modal('hide');
 
-					$('html, body').stop().animate({
+					jQuery('html, body').stop().animate({
 						scrollTop: $el.getTarget().offset().top
 					}, 1000);
 
@@ -57,26 +57,26 @@ $.fn.smooth_scroll = function( options ) {
 
 
 
-$(document).ready(function () {
+jQuery(document).ready(function () {
 
-	$('a[href]').smooth_scroll();
+	jQuery('a[href]').smooth_scroll();
 
 
 });
 
 
 /****Header3 Scroll Toggle****/
-$(window).scroll(function(){
-	$('.header3 nav').toggleClass('scrolled', $(this).scrollTop() > 5);
+jQuery(window).scroll(function(){
+	jQuery('.header3 nav').toggleClass('scrolled', jQuery(this).scrollTop() > 5);
 });
 
-$(document).ready(function(){
+jQuery(document).ready(function(){
 
 	//Bootstrap Navigation Active ToggleClass
-	$( '.navbar-nav a' ).on( 'click', function (event) {
+	jQuery( '.navbar-nav a' ).on( 'click', function (event) {
 
-		$( '.navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
-		$( this ).parent( 'li' ).addClass( 'active' );
+		jQuery( '.navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+		jQuery( this ).parent( 'li' ).addClass( 'active' );
 
 	});
 
