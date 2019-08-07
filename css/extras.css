@@ -313,3 +313,10 @@ strong.header-cart-count{
       box-shadow: none;
   }
 }
+
+.dropdown-menu>.active>a{
+  color: #333 !important;
+}
+.dropdown-menu>.active>a:hover{
+  color: #fff !important;
+}
