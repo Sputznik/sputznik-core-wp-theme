@@ -222,6 +222,15 @@
   }
 }
 
+@media( min-width: 769px ){
+  .dropdown-menu>.active>a{
+    color: #333 !important;
+  }
+  .dropdown-menu>.active>a:hover{
+    color: #fff !important;
+  }
+}
+
 /* WOOCOMMERCE HEADER CART COUNT */
 strong.header-cart-count{
   color           : #FFF;
@@ -312,11 +321,4 @@ strong.header-cart-count{
       -webkit-box-shadow: none;
       box-shadow: none;
   }
-}
-
-.dropdown-menu>.active>a{
-  color: #333 !important;
-}
-.dropdown-menu>.active>a:hover{
-  color: #fff !important;
 }
