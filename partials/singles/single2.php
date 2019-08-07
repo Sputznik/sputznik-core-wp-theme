@@ -2,7 +2,7 @@
   <?php if(have_posts()): while ( have_posts() ): the_post();?>
   <article class="single-post">
     <?php if( has_post_thumbnail() ):?>
-      <div class="header_img" style="background:url( <?php _e( get_the_post_thumbnail_url() );?> );">
+      <div class="header_img" style="background-image:url( <?php _e( get_the_post_thumbnail_url() );?> );">
     <?php else:?>
       <div class="header_no_img" style="display: none;">
     <?php endif;?>
@@ -76,8 +76,8 @@
    line-height: 1.375em;
    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
  }
- .single-template-2 .post-title-section .author-info{
-   color: #fff;
+ .single-template-2 .author-info{
+   color: #fff !important;
  }
  .single-template-2 .post-content > .post-tags{
    margin-top: 25px;
@@ -103,22 +103,10 @@
    font-weight: 900;
 }
 
-
- /* .single-template-2 .post-content > .post-tags >  a::before {
-   display: inline-block;
-   font-style: normal;
-   font-variant: normal;
-   text-rendering: auto;
-   -webkit-font-smoothing: antialiased;
- } */
-
- /* Step 2: Reference Individual Icons */
- /* .single-template-2 .post-content > .post-tags >  a::before {
-   font-family: "Font Awesome 5 Free";
-   font-weight: 900;
-   content: "\f007";
- } */
-
+.single-template-2 .comment-reply-title{
+  padding-top: 0;
+  border: none;
+}
 
 @media( max-width: 767px ){
   .single-template-2 .post-content, .single-template-2 .space{
@@ -131,11 +119,8 @@
   .single-template-2 .space{
     padding-top: 5px;
   }
-  .entry-comments{
+  .single-template-2 .entry-comments{
     margin-top: 10px;
-  }
-  .comment-reply-title{
-    padding-top: 0;
   }
 }
  /* @media( min-width: 769px ){
