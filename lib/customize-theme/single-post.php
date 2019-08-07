@@ -10,7 +10,7 @@ add_action('customize_register', function( $wp_customize ){
     'single1' => 'Default',
     'single2' => 'Overlay featured image',
     'single3' => 'Blog Post',
-    'single4' => 'SiteOrigin Template'
+    'single4' => 'SiteOrigin Template',
     'single5'	=> 'Resource'
   ) );
 
