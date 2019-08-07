@@ -15,6 +15,7 @@
     <div class="post-content narrow-col">
       <?php the_content(); ?>
       <div class="post-tags">
+        <h4>Tagged Under: </h4>
         <?php the_tags( '', '', '' ); ?>
       </div>
     </div>
@@ -132,7 +133,6 @@
  @media( min-width: 1025px ){
    .single-template-2 .post-content{
      width: 1000px;
-      margin: 20 auto;
    }
  }
 </style>
