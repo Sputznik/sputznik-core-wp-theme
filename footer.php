@@ -2,18 +2,18 @@
 <footer>
 	<div class="container-fluid">
 		<div class="row">
-		<?php 
+		<?php
 			/*
 			global $sp_theme, $sp_customize;
 
 			$option = $sp_customize->get_option();
 
-			$footer_cols = isset( $option['footer']['column'] ) ? $option['footer']['column'] : 4;	
-						
+			$footer_cols = isset( $option['footer']['column'] ) ? $option['footer']['column'] : 4;
+
 			for( $i = 1; $i<=$footer_cols; $i++ ){
-				
+
 				$footer_col_class = $sp_theme->get_col_class( $footer_cols );
-				
+
 				_e('<div id="footer-sidebar'.$i.'" class="'.$footer_col_class.'">');
 				if( is_active_sidebar( 'footer-sidebar-'.$i ) ){ dynamic_sidebar( 'footer-sidebar-'.$i ); }
 				_e('</div>');
@@ -22,12 +22,18 @@
 		?>
 		</div>
 	</div>
+	<?php
+	if( current_user_can( 'administrator' ) && ( is_single() || is_page() )  ):?>
+		<div class="edit_link">
+			<?php edit_post_link( '<span><i class="fa fa-pencil"></i>','</span>');?>
+		</div>
+	<?php endif;?>
 	<?php do_action('sp_copyright');?>
 </footer>
 
 
 
-<?php 
+<?php
 	/* CLOSING THE CONTAINER DIVS FOR HEADER 1 */
 	global $sp_customize;
 	$header_type = $sp_customize->get_header_type();
@@ -41,7 +47,7 @@
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->	
+	</div><!-- /.modal -->
 <?php endif;?>
 
 
@@ -57,7 +63,6 @@
 		</div>
 	</div>
 </div>
-
 <?php wp_footer();?>
 </body>
 </html>
