@@ -223,10 +223,10 @@
 }
 
 @media( min-width: 769px ){
-  .dropdown-menu>.active>a{
+  .navbar .dropdown-menu>.active>a{
     color: #333 !important;
   }
-  .dropdown-menu>.active>a:hover{
+  .navbar .dropdown-menu>.active>a:hover{
     color: #fff !important;
   }
 }
@@ -260,7 +260,7 @@ strong.header-cart-count{
 
 /* Dropdown for small devices */
 @media( max-width: 768px ){
-   .dropdown-menu > li > a{
+  .navbar .dropdown-menu > li > a{
     color: #fff;
     font-weight: 100 !important;
   }
@@ -310,7 +310,7 @@ strong.header-cart-count{
 }
 /* Show dropdown menu on mouse hover */
 @media( max-width:768px ){
-  .dropdown-menu{
+  .navbar .dropdown-menu{
   	  display: block;
       position: static;
       float: none;
