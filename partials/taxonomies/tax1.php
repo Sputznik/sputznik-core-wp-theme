@@ -1,10 +1,10 @@
 <?php $term = $wp_query->get_queried_object();?>
-<div class="container">
+<div class="container" style="margin-top: 80px;">
   <div class="row">
     <div class='col-sm-12'>
-      <h2 style="text-transform: capitalize;">
-        <?php _e( $term->name );?>
-      </h2>
+      <h1 class="text-center" style="text-transform: capitalize;">
+        Tagged Under: <?php _e( $term->name );?>
+      </h1>
       <br>
       <?php if (have_posts()) : ?>
       <ul class='orbit-three-grid' style='margin-bottom:50px; padding-left: 0;'>
