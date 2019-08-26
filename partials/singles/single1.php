@@ -40,22 +40,3 @@
     </div>
   </div>
 </div>
-<style>
-	article.single-post{ margin-bottom: 100px; }
-	article.single-post .post-nav{ display: none; }
-	#content{ margin-top: 100px !important; }
-	@media( min-width:769px ){
-		.single-featured-image{
-			float: right;
-			margin-left: 20px;
-		}
-	}
-	.single-featured-image{ margin-bottom: 20px;}
-	.single-featured-image img{
-		max-width: 600px;
-		height: auto;
-		width: 100%;
-	}
-
-	.author-info{ margin-bottom: 20px;}
-</style>
