@@ -1,7 +1,7 @@
 /* Single template 1 */
 .single-template-1 article.single-post{ margin-bottom: 100px; }
 .single-template-1 article.single-post .post-nav{ display: none; }
-#content{ margin-top: 100px !important; }
+#content.single-template-1{ margin-top: 100px !important; }
 @media( min-width:769px ){
   .single-template-1 .single-featured-image{
     float: right;
