@@ -50,7 +50,7 @@
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 .single-template-2 .author-info{
-  color: #fff !important;
+  color: #fff;
 }
 .single-template-2 .post-content > .post-tags{
   margin-top: 25px;
