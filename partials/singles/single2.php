@@ -9,7 +9,7 @@
       <div class="overlay"></div>
       <div class="post-title-section">
         <h1 class="text-center"><?php the_title(); ?></h1>
-        <div class='author-info text-center'>By <?php the_author();?> | <?php the_date();?></div>
+        <div class='author-info text-center'>By <?php the_author();?> &nbsp;|&nbsp; <?php the_date();?></div>
       </div>
     </div>
     <div class="post-content narrow-col">
