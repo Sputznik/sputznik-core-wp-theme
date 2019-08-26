@@ -23,11 +23,11 @@
 		</div>
 	</div>
 	<?php
-	//if( current_user_can( 'administrator' ) && ( is_single() || is_page() )  ):?>
-		<!-- <div class="edit_link"> -->
-			<?php //edit_post_link( '<span><i class="fa fa-pencil"></i>','</span>');?>
-		<!-- </div> -->
-	<?php //endif;?>
+	if( current_user_can( 'administrator' ) && ( is_single() || is_page() )  ):?>
+		<div class="edit_link">
+			<?php edit_post_link( '<span><i class="fa fa-pencil"></i>','</span>');?>
+		</div>
+	<?php endif;?>
 	<?php do_action('sp_copyright');?>
 </footer>
 
