@@ -87,6 +87,12 @@
   			'url'	=> 'Maven+Pro:400,500,700,900'
   		);
 
+			$fonts[] = array(
+					'slug'	=> 'playfair',
+					'name'	=> 'Playfair Display',
+					'url'	=> 'Playfair+Display'
+				);
+
 		return $fonts;
 
 	});
