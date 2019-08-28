@@ -160,7 +160,8 @@
 
   /* When a link is active */
   .header4 .navbar-nav > .active > a,
-  .header4 .navbar-nav > .active > a:focus{
+  .header4 .navbar-nav > .active > a:focus,
+  .header4 .navbar-nav > .active > a:hover{
     color: #fff !important;
     background-color: #000;
   }
