@@ -6,7 +6,7 @@
 				<h1 class="page-title"><?php printf( __( '(%d) Search Results for: %s' ), $wp_query->found_posts, get_search_query() ); ?></h1>
 				<hr>
 				<?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
-				<div style="margin-bottom: 30px;">
+				<div class="search-item">
 					<h2 class='orbit-title'><a href='<?php the_permalink();?>'><?php the_title();?></a></h2>
 					<?php $excerpt = get_the_excerpt();?>
 					<?php if( $excerpt ): ?><div class='orbit-excerpt'><?php _e( $excerpt );?></div><?php endif;?>

@@ -403,3 +403,5 @@ strong.header-cart-count{
 	text-decoration: none;
 }
 /* PAGINATION IN SEARCH */
+
+.search-item{ margin-bottom: 40px; }
