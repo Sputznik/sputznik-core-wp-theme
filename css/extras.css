@@ -363,3 +363,29 @@ strong.header-cart-count{
   text-align: center;
   margin: 11px auto;
 }
+
+/* PAGINATION IN SEARCH */
+.search-pagination{
+	background:#f7f7f7;
+	border-top:#eaeaea solid 1px;
+}
+.search-pagination .navigation{ display: block; }
+.search-pagination .page-numbers {
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0 2px 0 0;
+	line-height: 1;
+	text-decoration: none;
+	border-radius: 2px;
+	font-weight: 600;
+	border-radius: 50%;
+	border: 1px solid #f7f7f7;
+}
+.search-pagination .page-numbers.prev{ float: left;}
+.search-pagination .page-numbers.next{ float: right;}
+.search-pagination .page-numbers.current,.search-pagination a.page-numbers:hover {
+	background: #eee;
+	border: 1px solid #eee;
+	text-decoration: none;
+}
+/* PAGINATION IN SEARCH */

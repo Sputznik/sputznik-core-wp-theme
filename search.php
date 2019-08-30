@@ -14,23 +14,28 @@
 				</div>
 				<?php endwhile;?>
 				<?php
-						// Previous/next page navigation.
-						_e('<div>');
-						the_posts_pagination(
-							array(
-								'mid_size' 	=> 1,
-								'prev_text' => __( '&laquo; Previous' ),
-								'next_text' => __( 'Next &raquo;' ),
-								'screen_reader_text' => __( ' ' ),
-							)
-						);
-						_e('</div>');
-
-			 		else :
+					else :
 			 			printf( __('Sorry, but nothing matched your search terms. Please try again with some different keywords.') );
-
-			 	endif; ?>
+					endif;
+				?>
 			</div>
 		</div>
 	</div>
+	<?php if ( have_posts() ): ?>
+	<!-- Previous/next page navigation. -->
+	<div class="container-fluid search-pagination">
+		<div class="container text-center">
+			<?php
+				the_posts_pagination(
+					array(
+						'mid_size' 	=> 1,
+						'prev_text' => __( '&laquo;' ),
+						'next_text' => __( '&raquo;' ),
+						'screen_reader_text' => __( ' ' ),
+					)
+				);
+			?>
+		</div>
+	</div>
+	<?php endif;?>
 <?php get_footer();?>
