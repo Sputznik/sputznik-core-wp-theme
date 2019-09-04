@@ -44,23 +44,35 @@
 	} );
 
 
-	//Add WOOCOMMERCE THEME SUPPORT
-	function sp_add_woocommerce_support() {
-	  add_theme_support( 'woocommerce', array(
-	  	'thumbnail_image_width' => 150,
-	  	'single_image_width'    => 300,
-		'product_grid'          => array(
-			'default_rows'    => 3,
-			'min_rows'        => 2,
-			'max_rows'        => 8,
-			'default_columns' => 4,
-			'min_columns'     => 2,
-			'max_columns'     => 5,
-		),
-	  ) );
-	}
-	add_action( 'after_setup_theme', 'sp_add_woocommerce_support' );
+	
+	//WOOCOMMERCE 
+	if(  ! function_exists( 'is_woocommerce_activated' ) ) {
+		
+		//Add WOOCOMMERCE THEME SUPPORT
+		function sp_add_woocommerce_support() {
+		  add_theme_support( 'woocommerce', array(
+		  	'thumbnail_image_width' => 150,
+		  	'single_image_width'    => 300,
+			'product_grid'          => array(
+				'default_rows'    => 3,
+				'min_rows'        => 2,
+				'max_rows'        => 8,
+				'default_columns' => 4,
+				'min_columns'     => 2,
+				'max_columns'     => 5,
+			),
+		  ) );
+		}
+		add_action( 'after_setup_theme', 'sp_add_woocommerce_support' );
 
+		//WOOCOMMERCE : Remove Sidebar From Shop Page And Product Page
+		add_action('woocommerce_after_main_content', function() {
+			if ( is_shop() || is_product() ) { 
+				remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+			}
+		} );
+	
+	}
 
 
 
