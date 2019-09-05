@@ -43,11 +43,20 @@
 		return $layout_folders;
 	} );
 
+	
+	/**
+	 * Check if WooCommerce is activated
+	*/
+	if ( ! function_exists( 'is_woocommerce_activated' ) ) {
+		function is_woocommerce_activated() {
+			if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
+		}
+	}	
 
 	
 	//WOOCOMMERCE 
-	if(  ! function_exists( 'is_woocommerce_activated' ) ) {
-		
+	if( is_woocommerce_activated() ) {
+				
 		//Add WOOCOMMERCE THEME SUPPORT
 		function sp_add_woocommerce_support() {
 		  add_theme_support( 'woocommerce', array(
