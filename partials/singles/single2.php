@@ -20,6 +20,7 @@
       </div>
     </div>
     <div class="space">
+      <?php get_template_part( 'partials/icons', 'box');?>
       <?php get_template_part( 'partials/comments', 'box');?>
       <?php get_template_part( 'partials/post', 'navigation');?>
     </div>
