@@ -51,7 +51,7 @@
 							'default'	=> false
 						),
 					),
-					'post_type'	=> apply_fiters( 'sp_transparent_header_types', $this->get_registered_post_types() ),
+					'post_type'	=> apply_filters( 'sp_transparent_header_types', $this->get_registered_post_types() ),
 					'context'	=> 'side',
 					'priority'	=> 'default'
 				),
