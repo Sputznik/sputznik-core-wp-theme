@@ -3,19 +3,19 @@
   $icons = array(
     'fb'  => array(
       'icon' => 'fa fa-facebook',
-      'link' => ''
+      'link' => 'https://www.facebook.com/sharer.php?u=' . get_the_permalink()
     ),
     'tw'  => array(
       'icon' => 'fa fa-twitter',
-      'link' => ''
+      'link' => 'https://twitter.com/intent/tweet?url=' . get_the_permalink()
     ),
     'gplus'  => array(
-      'icon' => 'fa fa-google-plus',
-      'link' => ''
+      'icon' => 'fa fa-envelope',
+      'link' => 'mailto:?subject=' . get_the_title()
     ),
     'linkedin'  => array(
       'icon' => 'fa fa-linkedin',
-      'link' => ''
+      'link' => 'https://www.linkedin.com/sharing/share-offsite/?url=' . get_the_permalink()
     ),
   );
 ?>
