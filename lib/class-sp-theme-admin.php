@@ -51,8 +51,7 @@
 							'default'	=> false
 						),
 					),
-					'post_type'	=> $this->display_transparent_header(),
-					// 'post_type'	=> array( 'orbit-1' ),
+					'post_type'	=> apply_fiters( 'sp_transparent_header_types', $this->get_post_types() ),
 					'context'	=> 'side',
 					'priority'	=> 'default'
 				),
@@ -60,11 +59,12 @@
 
 		}
 
-		function display_transparent_header(){
+		function get_post_types(){
 
 			$allTypes = array();
 
 			$get_types = get_post_types( array( 'public' => true ), 'names' );
+
 			 // Gets orbit bundle post types
 			$args = array(
 				'post_type'       => 'orbit-types',
@@ -72,27 +72,11 @@
 			);
 			 $query = new WP_Query( $args );
 
-			foreach ( $query->posts as $key => $value) {
-				$get_types[$value->post_name] = $value->post_title;
-			}
-
-			/*
-			foreach ( $get_types as $slug => $post_type ) {
-				if( !( in_array( $slug, array( 'attachment' ) ) ) ){
-					$allTypes[$post_type] = $slug;
-				}
-			}
-			*/
+			foreach ( $query->posts as $key => $value) { $get_types[$value->post_name] = $value->post_title; }
 
 			$allTypes = array_keys( $get_types );
 			unset( $allTypes[2] );
-			//$types = implode( ',', $allTypes );
 
-			//$custom_types = explode( ',', $types );
-			// echo "<pre>";
-			// print_r( $allTypes );
-			// echo "</pre>";
-			// wp_die();
 			return $allTypes;
 		}
 
