@@ -1,6 +1,6 @@
 <?php
 
-	define('SPUTZNIK_THEME_VERSION', '2.1.2' );
+	define('SPUTZNIK_THEME_VERSION', '2.1.3' );
 
 	$inc_files = array(
 		'lib/class-sp-theme.php',
@@ -43,7 +43,7 @@
 		return $layout_folders;
 	} );
 
-	
+
 	/**
 	 * Check if WooCommerce is activated
 	*/
@@ -51,12 +51,12 @@
 		function is_woocommerce_activated() {
 			if ( class_exists( 'woocommerce' ) ) { return true; } else { return false; }
 		}
-	}	
+	}
 
-	
-	//WOOCOMMERCE 
+
+	//WOOCOMMERCE
 	if( is_woocommerce_activated() ) {
-				
+
 		//Add WOOCOMMERCE THEME SUPPORT
 		function sp_add_woocommerce_support() {
 		  add_theme_support( 'woocommerce', array(
@@ -76,11 +76,11 @@
 
 		//WOOCOMMERCE : Remove Sidebar From Shop Page And Product Page
 		add_action('woocommerce_after_main_content', function() {
-			if ( is_shop() || is_product() ) { 
+			if ( is_shop() || is_product() ) {
 				remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 			}
 		} );
-	
+
 	}
 
 
