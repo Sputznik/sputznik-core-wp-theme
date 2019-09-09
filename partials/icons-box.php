@@ -9,13 +9,13 @@
       'icon' => 'fa fa-twitter',
       'link' => 'https://twitter.com/intent/tweet?url=' . get_the_permalink()
     ),
-    'gplus'  => array(
-      'icon' => 'fa fa-envelope',
-      'link' => 'mailto:?subject=' . get_the_title()
-    ),
     'linkedin'  => array(
       'icon' => 'fa fa-linkedin',
       'link' => 'https://www.linkedin.com/sharing/share-offsite/?url=' . get_the_permalink()
+    ),
+    'mail'  => array(
+      'icon' => 'fa fa-envelope',
+      'link' => 'mailto:?subject=' . get_the_title()
     ),
   );
 ?>
