@@ -20,7 +20,7 @@
   );
 ?>
 <?php if( count( $icons ) ):?>
-<ul class="list-inline text-center">
+<ul class="list-inline social-icons">
 	<?php foreach( $icons as $slug => $icon ):?>
 	<li><a href="<?php _e( $icon[ 'link' ] );?>" target="_blank"><i class="<?php _e( $icon['icon'] );?>"></i></a></li>
 	<?php endforeach;?>
