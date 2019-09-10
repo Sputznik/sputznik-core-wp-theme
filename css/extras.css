@@ -405,3 +405,18 @@ strong.header-cart-count{
 /* PAGINATION IN SEARCH */
 
 .search-item{ margin-bottom: 40px; }
+
+
+
+/*SEARCH BUTTON*/
+@media(max-width: 425px){
+	#search-modal .modal-content .btn{
+		transform: translate(-50%, -50%);
+  	margin-left: 0;
+	}
+	#search-modal .modal-content input[type='search']{font-size: 22px;}
+	#search-modal .modal-dialog{
+		top: 40%;
+  	transform: translatey(-40%);
+	}
+}
