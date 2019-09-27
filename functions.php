@@ -31,7 +31,7 @@
 	/* THEME SUPPORT FOR FEATURED IMAGES */
 	add_theme_support( 'post-thumbnails' );
 
-	add_theme_support( 'wc-product-gallery-lightbox' ); 
+	add_theme_support( 'wc-product-gallery-lightbox' );
 
 	/* ADD SOW FROM THE THEME */
 	add_action('siteorigin_widgets_widget_folders', function( $folders ){
@@ -62,19 +62,22 @@
 		//Add WOOCOMMERCE THEME SUPPORT
 		function sp_add_woocommerce_support() {
 		  add_theme_support( 'woocommerce', array(
-		  	'thumbnail_image_width' => 150,
-		  	'single_image_width'    => 300,
-			'product_grid'          => array(
-				'default_rows'    => 3,
-				'min_rows'        => 2,
-				'max_rows'        => 8,
-				'default_columns' => 4,
-				'min_columns'     => 2,
-				'max_columns'     => 5,
-			),
+		  	'thumbnail_image_width' => 200,
+		  	'single_image_width'    => 450,
+				'product_grid'          => array(
+					'default_rows'    => 3,
+					'min_rows'        => 2,
+					'max_rows'        => 8,
+					'default_columns' => 4,
+					'min_columns'     => 2,
+					'max_columns'     => 5,
+				),
 		  ) );
+
+			add_action( 'after_setup_theme', 'sp_add_woocommerce_support' );
+
 		}
-		add_action( 'after_setup_theme', 'sp_add_woocommerce_support' );
+
 
 		//WOOCOMMERCE : Remove Sidebar From Shop Page And Product Page
 		add_action('woocommerce_after_main_content', function() {
