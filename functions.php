@@ -31,6 +31,8 @@
 	/* THEME SUPPORT FOR FEATURED IMAGES */
 	add_theme_support( 'post-thumbnails' );
 
+	add_theme_support( 'wc-product-gallery-lightbox' ); 
+
 	/* ADD SOW FROM THE THEME */
 	add_action('siteorigin_widgets_widget_folders', function( $folders ){
 		$folders[] = get_template_directory() . '/so-widgets/';
