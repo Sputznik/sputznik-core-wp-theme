@@ -420,3 +420,16 @@ strong.header-cart-count{
   	transform: translatey(-40%);
 	}
 }
+
+/* Comments.php*/
+.sp-comments#comments{font-weight: 100;}
+.sp-comments .comments-title{ margin-top: 0; }
+.sp-comments .comment-list{ padding-top: 20px; padding-left: 0; }
+.sp-comments#comments .comment-list .comment .reply{ margin: 20px 0; }
+.sp-comments .comment-list > div{ padding-bottom: 10px; }
+.sp-comments#comments .comment-list .comment .reply a[href] {
+    border: #007acc solid 1px;
+    border-radius: 2px;
+    color: #007acc;
+    padding: 5px 15px;
+}
