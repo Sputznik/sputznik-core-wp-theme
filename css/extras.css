@@ -433,3 +433,16 @@ strong.header-cart-count{
     color: #007acc;
     padding: 5px 15px;
 }
+.sp-comments#comments,
+.comment-reply-title{
+  border: 0;
+  padding: 0;
+}
+.sp-comments#comments .comments-title{
+  border-top: 4px solid #1a1a1a;
+  padding-top: 30px;
+}
+.sp-comments#comments .comment-list{
+  border-bottom: 4px solid #1a1a1a;
+  padding-bottom: 30px;
+}
