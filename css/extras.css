@@ -446,3 +446,22 @@ strong.header-cart-count{
   border-bottom: 4px solid #1a1a1a;
   padding-bottom: 30px;
 }
+/* Header2*/
+@media( max-width: 768px ){
+  .navbar.header2{ margin-bottom: 0; }
+  .navbar.header2 .navbar-right{ background: #000; color: #fff; }
+  .navbar-toggle .icon-bar{ width: 30px; height: 5px; background-color: #333; }
+  .navbar.header2 .navbar-collapse ul > li.active > a,
+  .navbar.header2 .navbar-collapse ul > li > a:hover,
+  .navbar.header2 .navbar-collapse ul > li > a:focus {
+    color: #666;
+    background-color: transparent;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 768px){
+  .navbar.header2 .navbar-collapse{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* Header2*/
