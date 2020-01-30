@@ -21,6 +21,8 @@
 		/** Mobile Sticky Image **/
 		$sp_customize->image( $wp_customize, 'sp_logo_section', '[logo][mobile_sticky]', 'Mobile Sticky Logo', '');
 
+		/**Logo Alt text**/ 
+		$sp_customize->textarea( $wp_customize, 'sp_logo_section', '[logo][alt]', 'Alt Text', '' );
 
 
 		/** HEADER TYPE */

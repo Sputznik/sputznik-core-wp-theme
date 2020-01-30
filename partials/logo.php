@@ -7,7 +7,7 @@
 
 	if( isset( $option['logo'] ) && $option['logo'] ){
 
-		$img_alt = esc_attr( get_bloginfo( 'description', 'display' ) );
+		$img_alt = isset( $option['logo']['alt'] ) ? $option['logo']['alt'] : "";
 
 		/* CONTAINER */
 		_e('<div class="logo logo-normal"><a class="navbar-brand" href="'.get_bloginfo('url').'">');
