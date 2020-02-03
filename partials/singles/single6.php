@@ -4,7 +4,7 @@
     <?php if( has_post_thumbnail() ):?>
       <div class="header_img" style="background-image:url( <?php _e( get_the_post_thumbnail_url() );?> );"></div>
     <?php else:?>
-      <div class="header_no_img" style="display: none;"></div>
+      <div class="header_no_img"></div>
     <?php endif;?>
     <div class="post-content narrow-col">
       <div class="post-meta">
