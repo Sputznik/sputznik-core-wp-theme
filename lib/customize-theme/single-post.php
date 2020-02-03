@@ -11,7 +11,8 @@ add_action('customize_register', function( $wp_customize ){
     'single2' => 'Overlay featured image',
     'single3' => 'Blog Post',
     'single4' => 'SiteOrigin Template',
-    'single5'	=> 'Resource'
+    'single5'	=> 'Resource',
+    'single6'	=> 'Medium'
   ) );
 
   //$sp_customize->dropdown( $wp_customize, 'sp_single_post_section', '[single_template]', 'Template Type', 'template1', $templates_arr);
