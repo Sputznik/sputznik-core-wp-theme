@@ -36,8 +36,7 @@
         </div>
         <div class="author-meta">
           <div class="author-header">
-            <span style="color: #606567;">WRITTEN BY</span>
-              <h2 class="author-name"><?php the_author();?></h2>
+            <h2 class="author-name"><?php the_author();?></h2>
           </div>
           <div class="author-desc"><?php _e( get_the_author_meta( 'description', $post->post_author ) );?></div>
         </div>
