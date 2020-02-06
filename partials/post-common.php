@@ -9,7 +9,7 @@
 	}
 ?>
 
-<div class='orbit-thumbnail-bg' style='background-image: url( "<?php _e( $thumbnail[0] );?> ");position: relative;'>
+<div class='<?php _e( $img_class );?>' style='background-image: url( "<?php _e( $thumbnail[0] );?> ");position: relative;'>
 	<a href='<?php the_permalink();?>' style="position: absolute; top:0;left:0;width:100%;height: 100%;"></a>
 </div>
 <div class="orbit-content">
