@@ -4,7 +4,7 @@
 
 	$img_class = "orbit-thumbnail-bg";
 
-	if( !has_post_thumbnail() ){
+	if( !has_post_thumbnail() || !is_array( $thumbnail ) || !$thumbnail[0] ){
 		$img_class .= " no-thumbnail";
 	}
 ?>
