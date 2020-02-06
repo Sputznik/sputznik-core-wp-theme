@@ -1,6 +1,12 @@
 <?php
 	global $post;
 	$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' );
+
+	$img_class = "orbit-thumbnail-bg";
+
+	if( !has_post_thumbnail() ){
+		$img_class .= " no-thumbnail";
+	}
 ?>
 
 <div class='orbit-thumbnail-bg' style='background-image: url( "<?php _e( $thumbnail[0] );?> ");position: relative;'>
