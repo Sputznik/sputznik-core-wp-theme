@@ -2,7 +2,7 @@
 	global $post;
 	$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' );
 
-	$img_class = "orbit-thumbnail-bg";
+	$img_class = "orbit-thumbnail-bg test";
 
 	if( !has_post_thumbnail() || !is_array( $thumbnail ) || !$thumbnail[0] ){
 		$img_class .= " no-thumbnail";
