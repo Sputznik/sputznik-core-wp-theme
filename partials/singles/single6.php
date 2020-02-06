@@ -41,7 +41,6 @@
           <div class="author-desc"><?php _e( get_the_author_meta( 'description', $post->post_author ) );?></div>
         </div>
       </div>
-      <div class="decoration"></div>
     </div>
 
     <!-- Checks whether the post has tags or not -->
