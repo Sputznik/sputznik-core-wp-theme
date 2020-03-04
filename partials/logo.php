@@ -9,8 +9,10 @@
 
 		$img_alt = isset( $option['logo']['alt'] ) ? $option['logo']['alt'] : "";
 
+		$sp_logo_url = apply_filters( 'sp_logo_url', get_bloginfo('url') );
+
 		/* CONTAINER */
-		_e('<div class="logo logo-normal"><a class="navbar-brand" href="'.get_bloginfo('url').'">');
+		_e('<div class="logo logo-normal"><a class="navbar-brand" href="'.$sp_logo_url.'">');
 
 		/*DESKTOP LOGO*/
 		if( isset( $option['logo']['desktop'] ) && $option['logo']['desktop'] ){
