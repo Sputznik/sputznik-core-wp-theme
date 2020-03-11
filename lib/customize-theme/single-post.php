@@ -12,7 +12,8 @@ add_action('customize_register', function( $wp_customize ){
     'single3' => 'Blog Post',
     'single4' => 'SiteOrigin Template',
     'single5'	=> 'Resource',
-    'single6'	=> 'Medium'
+    'single6'	=> 'Medium',
+    'single7' => 'Template with Download Button'
   ) );
 
   //$sp_customize->dropdown( $wp_customize, 'sp_single_post_section', '[single_template]', 'Template Type', 'template1', $templates_arr);
