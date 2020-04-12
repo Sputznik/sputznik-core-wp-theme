@@ -3,6 +3,18 @@
 	add_filter( 'sp_list_google_fonts', function( $fonts ){
 
 		$fonts[] = array(
+			'slug'	=> 'roboto-slab',
+			'name'	=> 'Roboto Slab',
+			'url'		=> 'Roboto+Slab:100,200,300,400,500,600,700'
+		);
+
+		$fonts[] = array(
+			'slug'	=> 'montserrat',
+			'name'	=> 'Montserrat',
+			'url'		=> 'Montserrat:100,200,300,400,500,600,700'
+		);
+
+		$fonts[] = array(
 			'slug'	=> 'mukta',
 			'name'	=> 'Mukta',
 			'url'	=> 'Mukta'
@@ -21,35 +33,35 @@
 		);
 
 		$fonts[] = array(
-  			'slug'	=> 'lora',
-	  		'name'	=> 'Lora',
-  			'url'	=> 'Lora:400,700,400italic,700italic'
-  		);
+  		'slug'	=> 'lora',
+	  	'name'	=> 'Lora',
+  		'url'	=> 'Lora:400,700,400italic,700italic'
+  	);
 
 		$fonts[] = array(
-  			'slug'	=> 'raleway',
-	  		'name'	=> 'Raleway',
-  			'url'	=> 'Raleway:400,700'
-  		);
+  		'slug'	=> 'raleway',
+	  	'name'	=> 'Raleway',
+  		'url'	=> 'Raleway:400,700'
+  	);
 
 
-	  	$fonts[] =	array(
-  			'slug'	=> 'merriweather',
-  			'name'	=> 'Merriweather',
-  			'url'	=> 'Merriweather:400,400italic,700,700italic'
-	  	);
-
-		$fonts[] = array(
-  			'slug'	=> 'arvo',
-  			'name'	=> 'Arvo',
-  			'url'	=> 'Arvo:400,700,400italic,700italic'
-	  	);
+	  $fonts[] =	array(
+  		'slug'	=> 'merriweather',
+  		'name'	=> 'Merriweather',
+  		'url'	=> 'Merriweather:400,400italic,700,700italic'
+	  );
 
 		$fonts[] = array(
-  			'slug'	=> 'muli',
-  			'name'	=> 'Muli',
-  			'url'	=> 'Muli:400,400italic'
-	  	);
+  		'slug'	=> 'arvo',
+  		'name'	=> 'Arvo',
+  		'url'	=> 'Arvo:400,700,400italic,700italic'
+	  );
+
+		$fonts[] = array(
+  		'slug'	=> 'muli',
+  		'name'	=> 'Muli',
+  		'url'	=> 'Muli:400,400italic'
+	  );
 
 		$fonts[] = array(
   			'slug'	=> 'nunito',
