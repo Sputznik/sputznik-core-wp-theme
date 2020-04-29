@@ -7,10 +7,10 @@
       </h1>
       <br>
       <?php if (have_posts()) : ?>
-      <ul class="row-list" style='margin-bottom:50px; padding-left: 0;'>
+
         <?php while (have_posts()) : the_post(); ?>
-        <li class="orbit-article-db orbit-list-db">
-          <div class="col-md-4" style="padding-top:20px;">
+        <div class="row" style="margin-bottom:30px;">
+          <div class="col-md-4" style="margin-top:20px;">
             <?php
             $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' );
 
@@ -24,7 +24,7 @@
             	<a href='<?php the_permalink();?>' style="position: absolute; top:0;left:0;width:100%;height: 100%;"></a>
             </div>
           </div>
-          <div class="col-md-8 orbit-content">
+          <div class="col-md-8 orbit-content"">
             <h3 class='orbit-title'><a href='<?php the_permalink();?>'><?php the_title();?></a></h3>
 
           	<p>By <?php the_author();?> on <?php the_time( 'F jS Y' );?></p>
@@ -32,9 +32,9 @@
             <a class='orbit-btn' href='<?php the_permalink();?>'>Read More</a>
           </div>
 
-        </li>
+        </div>
         <?php endwhile; ?>
-      </ul>
+
       <?php endif; ?>
     </div>
   </div>
