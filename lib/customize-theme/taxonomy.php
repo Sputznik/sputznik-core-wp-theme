@@ -5,10 +5,10 @@ add_action('customize_register', function( $wp_customize ){
 
   $sp_customize->section( $wp_customize, 'sp_theme_panel', 'sp_taxonomy_section', 'Taxonomy Section', 'Change Template For Taxonomies');
 
-  /** SINGLE POST TYPE TEMPLATES */
+  /** POST LIST TEMPLATES */
   $templates_arr = apply_filters( 'sp_single_template_options', array(
     'tax1' => 'Three Grid',
-    //'tax2' => 'Three Grid',
+    'tax2' => 'Row Based Layout',
     // 'single3' => 'Blog Post',
     //'template4'	=> 'Template 4'
   ) );
