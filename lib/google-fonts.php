@@ -3,6 +3,18 @@
 	add_filter( 'sp_list_google_fonts', function( $fonts ){
 
 		$fonts[] = array(
+			'slug'	=> 'josefin',
+			'name'	=> 'Josefin Sans',
+			'url'	  => 'Josefin+Sans'
+		);
+
+		$fonts[] = array(
+			'slug'	=> 'news-cycle',
+			'name'	=> 'News Cycle',
+			'url'	  => 'News+Cycle'
+		);
+
+		$fonts[] = array(
 			'slug'	=> 'roboto-slab',
 			'name'	=> 'Roboto Slab',
 			'url'		=> 'Roboto+Slab:100,200,300,400,500,600,700'
