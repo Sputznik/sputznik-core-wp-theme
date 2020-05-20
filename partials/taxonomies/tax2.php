@@ -27,7 +27,11 @@
           <div class="col-md-8 orbit-content"">
             <h3 class='orbit-title'><a href='<?php the_permalink();?>'><?php the_title();?></a></h3>
 
-          	<p>By <?php the_author();?> on <?php the_time( 'F jS Y' );?></p>
+          	<p>By <?php
+              if ( function_exists('coauthors_posts_links') ) {
+			          coauthors_posts_links();
+		          }
+		          else { echo "plugin inactive"; } ?> on <?php the_time( 'F jS Y' );?></p>
           	<div class='orbit-excerpt'><?php the_excerpt();?></div>
             <a class='orbit-btn' href='<?php the_permalink();?>'>Read More</a>
           </div>
