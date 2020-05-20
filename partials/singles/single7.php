@@ -16,7 +16,12 @@
 						<div class="entry-summary"><?php _e( do_shortcode( '[orbit_excerpt]' ) );?></div>
 						<!-- AUTHOR AND DATE CHECK -->
 						<?php if (get_post_meta ( get_the_ID(), 'Author Name', true ) == 'yes') { ?>
-							<div class='author-info'>By <?php the_author();?> &nbsp;|&nbsp; <?php the_date();?></div>
+							<div class='author-info'>By <?php
+							if ( function_exists('coauthors_posts_links') ) {
+								coauthors_posts_links();
+							}
+							else { echo "plugin inactive"; }
+							?> &nbsp;|&nbsp; <?php the_date();?></div>
 						<?php }?>
 						<!-- LINK TO DOWNLOAD FILE -->
 						<?php
