@@ -90,6 +90,10 @@
 
 			wp_enqueue_script( 'sputznik', get_template_directory_uri() . '/js/script.js', array('bootstrap'), SPUTZNIK_THEME_VERSION, true );
 
+			wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js', array('jquery'), null, true);
+
+			wp_enqueue_script('slider-script', get_template_directory_uri() .'/js/logo-slider.js', array('jquery'), SPUTZNIK_THEME_VERSION, true);
+
 		}
 
 
