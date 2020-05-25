@@ -9,6 +9,7 @@
 		'single-post.php',
 		'taxonomy.php',
 		'archive.php',
+		'author.php',
 		'footer.php'
 	);
 
