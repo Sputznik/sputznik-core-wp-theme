@@ -1,4 +1,9 @@
-<div class='container'><?php do_action('sp_pre_footer');?></div>
+<?php
+	$prefooter_class = apply_filters('sp_prefooter_class','container');
+?>
+<div class='<?php _e($prefooter_class);?>'>
+	<?php do_action('sp_pre_footer');?>
+</div>
 <footer>
 	<div class="container-fluid">
 		<div class="row">
