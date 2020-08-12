@@ -1,5 +1,5 @@
 <?php
-	class SP_YOUTUBE_VIDEO{
+	class SP_YOUTUBE_VIDEO_POPUP{
 
 		function __construct(){
 			add_action( 'wp_enqueue_scripts', array( $this,'modal_script' ) );
