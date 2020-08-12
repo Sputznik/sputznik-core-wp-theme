@@ -38,4 +38,4 @@
 	}
 
 	global $youtube;
-	$youtube = new SP_YOUTUBE_VIDEO;
+	$youtube = new SP_YOUTUBE_VIDEO_POPUP;
