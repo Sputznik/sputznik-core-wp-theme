@@ -1,5 +1,5 @@
 <?php
-// $img_path = get_stylesheet_directory_uri().'/assets/logos/';
+$img_path = get_template_directory_uri().'/images/play-btn.png';
 $video_height = $height;
 $embed_url = $this->get_youtube_link( $url  );
 $thumbnail = $this->get_video_thumbnail( $url );
@@ -10,7 +10,5 @@ $thumbnail = $this->get_video_thumbnail( $url );
   </a>
 </div>
 <style>
-/* .youtube-frame .play-btn:after {
-	content: url('<?php //_e( $img_path.'/play-btn.png' );?>');
-} */
+  .sp-youtube-frame .play-btn:after {content: url('<?php _e( $img_path );?>');}
 </style>
