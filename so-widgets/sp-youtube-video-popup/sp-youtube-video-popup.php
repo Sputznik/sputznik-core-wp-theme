@@ -7,7 +7,7 @@
 	Widget URI:
 	Video URI:
 */
-class SP_Youtube_Video_Popup extends SiteOrigin_Widget {
+class SP_Youtube_Modal_Popup extends SiteOrigin_Widget {
 
 	function __construct() {
 		//Here you can do any preparation required before calling the parent constructor, such as including additional files or initializing variables.
@@ -54,4 +54,4 @@ class SP_Youtube_Video_Popup extends SiteOrigin_Widget {
         return '';
     }
 }
-siteorigin_widget_register('sp-youtube-video-popup', __FILE__, 'SP_Youtube_Video_Popup');
+siteorigin_widget_register('sp-youtube-video-popup', __FILE__, 'SP_Youtube_Modal_Popup');
