@@ -585,3 +585,80 @@ h3.thin {
 
 }
 /* SP YOUTUBE VIDEO WITH POPUP*/
+
+/* SP CAROUSEL WITH POPUP */
+#carousel-with-popup .carousel-inner .carousel-image{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Indicators */
+#carousel-with-popup .carousel-indicators li {
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: rgba(255,255,255,.5);
+	border: 0;
+}
+/* Active Indicator */
+#carousel-with-popup .carousel-indicators .active {margin: 1px;}
+#carousel-with-popup .carousel-indicators li.active {
+	width: 30px;
+  height: 3px;
+	margin: 1px 3px;
+  background-color: #fff;
+}
+/* Active Indicator */
+
+/* Remove the shadow */
+#carousel-with-popup .left.carousel-control,
+#carousel-with-popup .right.carousel-control{ background: none;}
+/* Remove the shadow */
+
+/* Carousel Controls */
+#carousel-with-popup .carousel-control{
+  color: #fff !important;
+  opacity: .9 !important;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 50px;
+  display: inline-block;
+}
+#carousel-with-popup .carousel-control .glyphicon-chevron-left{left: 25%;}
+#carousel-with-popup .carousel-control .glyphicon-chevron-right{right: 25%;}
+
+/* Carousel Caption */
+#carousel-with-popup .carousel-caption h2{
+  margin: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+/* Carousel Caption */
+
+@media( min-width: 768px ){
+  /* Carousel Caption */
+  #carousel-with-popup .carousel-caption {
+    text-align: left;
+    right: 30%;
+    left: 10%;
+    top: 40%;
+    bottom: 15%;
+  }
+  #carousel-with-popup .carousel-caption h2{font-size: 50px;}
+  /* Carousel Caption */
+}
+
+@media( max-width: 767px ){
+  #carousel-with-popup .carousel-caption {top:50%;}
+  #carousel-with-popup .carousel-control .glyphicon-chevron-left{margin-left: 0;}
+  #carousel-with-popup .carousel-control .glyphicon-chevron-right{margin-right: 0;}
+}
+/* SP CAROUSEL WITH POPUP */
