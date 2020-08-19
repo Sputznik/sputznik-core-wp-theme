@@ -18,7 +18,7 @@ jQuery.fn.youtube_video_thumb = function() {
       html += '<div class="modal-dialog">';
       html += '<div class="modal-content">';
       html += '<div class="modal-body text-center">';
-      html += '<iframe width="420" height="315" allow="autoplay" src="';
+      html += '<iframe width="100%" height="100%" allow="autoplay" src="';
       html += embed_url;
       html += '"></iframe>'
       html += '</div>';   // body

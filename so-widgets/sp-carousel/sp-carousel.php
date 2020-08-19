@@ -56,11 +56,27 @@ class SP_Custom_Carousel extends SiteOrigin_Widget {
 						),
 					)
 				),
-				'carousel_height' => array(
-					'type' 			=> 'text',
-					'label' 		=> __( 'Carousel Height', 'siteorigin-widgets' ),
-					'default' 	=> '80vh',
-					'description'	=>	__( 'Must be in vh. Default value 80vh. Max value 100vh', 'siteorigin-widgets' ),
+				'design_section' => array(
+	 				'type' => 'section',
+	 				'label' => __( 'Design' , 'siteorigin-widgets' ),
+	 				'hide' => true,
+	 				'fields' => array(
+						'carousel_height' => array(
+							'type' 				=> 'text',
+							'label' 			=> __( 'Carousel Height', 'siteorigin-widgets' ),
+							'default' 		=> '80vh',
+							'description'	=>	__( 'Must be in vh. Default value 80vh. Max value 100vh', 'siteorigin-widgets' ),
+						),
+						'carousel_overlay' => array(
+			        'type' 				=> 'slider',
+			        'label' 			=> __( 'Carousel Overlay', 'siteorigin-widgets' ),
+			        'default' 		=> 4,
+			        'min' 				=> 0,
+			        'max'					=> 10,
+			        'integer' 		=> true,
+							'description'	=>	__( 'Default value 4. Max value 10', 'siteorigin-widgets' ),
+				    ),
+	 				)
 				),
 			),
 			//The $base_folder path string.

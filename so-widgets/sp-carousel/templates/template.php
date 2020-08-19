@@ -1,11 +1,10 @@
 <?php
-
-  $height =  !empty( $instance['carousel_height'] ) ? $instance['carousel_height'] : '80vh';
+  $design       = $instance['design_section'];
+  $height       = !empty( $design['carousel_height'] ) ? $design['carousel_height'] : '80vh';
+  $overlay      = !empty( $design['carousel_overlay'] ) ? $design['carousel_overlay']/10 : '0.4';
 
 ?>
-<div id="carousel-with-popup" class="carousel slide" data-ride="carousel">
-
-<!-- data-interval="false" -->
+<div id="carousel-with-popup" class="carousel slide" data-ride="carousel" data-interval="false">
 
 <!-- Indicators -->
 <ol class="carousel-indicators">
@@ -27,6 +26,7 @@
 			<div class="item-body">
         <a href="#sp-youtube-modal" data-behaviour="sp-youtube" data-toggle="modal" data-url="<?php _e($embed_url);?>">
           <div class="carousel-image" style="background-image:url(<?php _e( $image )?>);"></div>
+          <div class="carousel-overlay"></div>
           <div class="carousel-caption">
   					<h2 class="cap-txt"><?php _e( $item['carousel_caption'] ); ?></h2>
   				</div>
@@ -56,4 +56,9 @@
 }
 /* Carousel height */
 
+/* Carousel overlay */
+#carousel-with-popup .carousel-overlay{
+  background-color: rgba(0,0,0,<?php _e($overlay)?>);
+}
+/* Carousel overlay */
 </style>

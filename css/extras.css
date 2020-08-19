@@ -544,7 +544,8 @@ h3.thin {
 	transform: translate(-50%, -50%);
 }
 
-.sp-youtube-frame .overlay{
+.sp-youtube-frame .overlay,
+#carousel-with-popup .carousel-overlay{
 	position: absolute;
 	top: 0;
 	left:0;
@@ -563,12 +564,12 @@ h3.thin {
 /* Modal */
 
 @media( min-width: 769px ){
-  .sp-youtube-popup .modal-dialog{ top: 10%; }
+  .sp-youtube-popup .modal-dialog{ top: 6%; }
   .sp-youtube-popup iframe{
-    width: 100%;
+    width: 95%;
     border: none;
-    height: auto;
-    min-height: 400px;
+    height: 100%;
+    min-height: 500px;
   }
 }
 @media only screen and (max-width: 768px) and (min-width: 768px){
@@ -654,6 +655,9 @@ h3.thin {
   }
   #carousel-with-popup .carousel-caption h2{font-size: 50px;}
   /* Carousel Caption */
+
+  /* SP YOUTUBE VIDEO WITH POPUP*/
+  .sp-youtube-popup .modal-dialog {width: 95%;}
 }
 
 @media( max-width: 767px ){
