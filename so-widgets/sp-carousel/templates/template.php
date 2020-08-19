@@ -4,7 +4,7 @@
   $overlay      = !empty( $design['carousel_overlay'] ) ? $design['carousel_overlay']/10 : '0.4';
 
 ?>
-<div id="carousel-with-popup" class="carousel slide" data-ride="carousel" data-interval="false">
+<div id="carousel-with-popup" class="carousel slide" data-ride="carousel">
 
 <!-- Indicators -->
 <ol class="carousel-indicators">
@@ -37,11 +37,11 @@
 </div>
 
 <!-- Controls -->
-<a class="left carousel-control" href="#carousel-with-popup" role="button" data-slide="prev">
+<a class="left carousel-control" data-target="#carousel-with-popup" role="button" data-slide="prev">
   <span class="glyphicon glyphicon-chevron-left"></span>
   <span class="sr-only">Previous</span>
 </a>
-<a class="right carousel-control" href="#carousel-with-popup" role="button" data-slide="next">
+<a class="right carousel-control" data-target="#carousel-with-popup" role="button" data-slide="next">
   <span class="glyphicon glyphicon-chevron-right"></span>
   <span class="sr-only">Next</span>
 </a>
