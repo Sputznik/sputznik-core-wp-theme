@@ -28,7 +28,9 @@
           <div class="carousel-image" style="background-image:url(<?php _e( $image )?>);"></div>
           <div class="carousel-overlay"></div>
           <div class="carousel-caption">
-  					<h2 class="cap-txt"><?php _e( $item['carousel_caption'] ); ?></h2>
+            <h2 class="caption-text">
+              <?php _e( $item['carousel_caption'] ); ?>
+            </h2>
   				</div>
         </a>
 			</div>
