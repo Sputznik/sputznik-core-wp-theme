@@ -12,9 +12,13 @@
 
 			$image = wp_get_attachment_url( $item['avatar']);
 
+			$user_classes = array( 'col-lg-4', 'col-sm-6', 'user' );
+			if( isset( $item['description'] ) && $item['description'] ){
+				array_push( $user_classes, 'has-layer3' );
+			}
 
 		?>
-	<div class="col-lg-4 col-sm-6 user">
+	<div class="<?php _e( implode( ' ', $user_classes ) );?>">
 		<div class="layer1">
 			<div class="user-avatar" style="background-image:url('<?php echo $image;?>');"></div>
 		</div>

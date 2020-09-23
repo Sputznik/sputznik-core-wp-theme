@@ -686,6 +686,8 @@ h3.thin {
 	width: 60%;
 	margin: 0 auto;
 	position: relative;
+	transition:opacity 0.8s;
+	opacity: 1;
 }
 
 .sp-list-users .user .user-avatar{
@@ -714,20 +716,20 @@ h3.thin {
 }
 .sp-list-users .layer3{
 	position: absolute;
-	width: 100%;
+	width: 70%;
 	height: 100%;
 	left: 7%;
 	bottom: 0%;
-	width: 60%;
-	opacity: 0;
 	padding: 20px 10px;
+	transition:opacity 0.8s;
+	opacity: 0;
 }
 
-.sp-list-users .user:hover .layer1{
+.sp-list-users .user.has-layer3:hover .layer1{
 	transition:opacity 0.8s;
 	opacity: 0.1;
 }
-.sp-list-users .user:hover .layer3{
+.sp-list-users .user.has-layer3:hover .layer3{
 	transition:opacity 0.8s;
 	opacity: 1;
 }
