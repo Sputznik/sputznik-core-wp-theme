@@ -1,18 +1,10 @@
-<?php
-
-	//ORBIT_UTIL::getInstance()->test( $instance );
-
-
-
-?>
-
 <div class="row sp-list-users">
 	<?php foreach( $instance['items'] as $item ):?>
 		<?php
 
 			$image = wp_get_attachment_url( $item['avatar']);
 
-			$user_classes = array( 'col-lg-4', 'col-sm-6', 'user' );
+			$user_classes = array( 'user' );
 			if( isset( $item['description'] ) && $item['description'] ){
 				array_push( $user_classes, 'has-layer3' );
 			}

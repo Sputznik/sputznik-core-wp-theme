@@ -673,8 +673,14 @@ h3.thin {
 /* SP CAROUSEL WITH POPUP */
 
 /* SP LIST USERS */
-.sp-list-users .user{
+.sp-list-users{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+}
 
+.sp-list-users .user{
+	width: 50%;
 	padding: 10px;
 	-webkit-transform: translate(0, 0);
 	-ms-transform: translate(0, 0);
@@ -700,7 +706,7 @@ h3.thin {
 	position: absolute;
 	height: 180px;
 	right: 0;
-	bottom: 0;
+	bottom: -1px;
 	left: 0;
 }
 .sp-list-users .user .user-avatar:after{
@@ -709,30 +715,27 @@ h3.thin {
 	/*height: 9999px;*/
 }
 
+/*
 .sp-list-users .layer2{
 	left: 10%;
 	bottom: 12%;
 	position: absolute;
 }
-.sp-list-users .layer3{
-	position: absolute;
-	width: 70%;
-	height: 100%;
-	left: 7%;
-	bottom: 0%;
-	padding: 20px 10px;
-	transition:opacity 0.8s;
-	opacity: 0;
+*/
+
+
+.sp-list-users .layer2{
+	margin: -20% 0 0 10%;
+	padding-bottom: 12%;
+	position: relative;
 }
 
-.sp-list-users .user.has-layer3:hover .layer1{
-	transition:opacity 0.8s;
-	opacity: 0.1;
+.sp-list-users .layer3{
+	margin: -10% 0 30px 10%;
+	position: relative;
 }
-.sp-list-users .user.has-layer3:hover .layer3{
-	transition:opacity 0.8s;
-	opacity: 1;
-}
+
+
 
 .sp-list-users .user-name{
 	font-size: 32px;
@@ -747,6 +750,7 @@ h3.thin {
 
 @media( min-width: 1200px ){
 	.sp-list-users .user{
+		width: 33.33%;
 		margin-bottom: 60px;
 	}
 	.sp-list-users .user:nth-child(6n), .sp-list-users .user:nth-child(6n-3){
@@ -764,24 +768,40 @@ h3.thin {
 		left: 60px;
 	}
 
-}
+	.sp-list-users .user .layer3{
+		position: absolute;
+		width: 70%;
+		height: 100%;
+		left: 10%;
+		bottom: 0%;
+		padding: 20px 10px;
+		transition:opacity 0.8s;
+		opacity: 0;
+		margin: auto;
+	}
 
-
-@media( max-width: 768px ){
-	.sp-list-users{
-		max-width: 400px;
-		margin: 0 auto;
+	.sp-list-users .user.has-layer3:hover .layer1{
+		transition:opacity 0.8s;
+		opacity: 0.1;
+	}
+	.sp-list-users .user.has-layer3:hover .layer3{
+		transition:opacity 0.8s;
+		opacity: 1;
 	}
 
 }
+
+
+@media( max-width: 550px ){
+	.sp-list-users .user{ width: 100%; }
+	.sp-list-users{ max-width: 400px; margin: 0 auto; }
+}
+/*
 @media( max-width: 400px ){
-	.sp-list-users .user .layer1{
-		width: 80%;
-	}
-	.sp-list-users .layer2{
-		left: 0%;
-	}
+	.sp-list-users .user .layer1{ width: 80%; }
+	.sp-list-users .layer2{ left: 0%; }
 }
+*/
 
 
 /* SP LIST USERS */
