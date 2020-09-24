@@ -8,7 +8,9 @@
 		'lib/customize-theme/main.php',
 		'lib/google-fonts.php',
 		'lib/the.php',
-		'lib/class-sp-youtube-video.php'
+		'lib/class-sp-base.php',
+		'lib/class-sp-youtube-video.php',
+		'lib/class-sp-users-jumbled.php',
 	);
 
 	foreach($inc_files as $inc_file){
