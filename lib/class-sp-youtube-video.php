@@ -24,14 +24,14 @@
 		}
 
     // YOUTUBE VIDEO THUMBNAIL
-    function get_video_thumbnail( $video_url ){
+    function get_video_thumbnail( $video_url, $resolution = 'sddefault' ){
 			$video_id = $this->get_video_id( $video_url );
-      $thumbnail = "http://img.youtube.com/vi/$video_id/mqdefault.jpg";
+      $thumbnail = "http://img.youtube.com/vi/$video_id/$resolution.jpg";
       return $thumbnail;
     }
 
 		// RETURNS YOUTUBE VIDEO THUMB UI
-		function create_video_thumb( $url, $height = '160px' ){
+		function create_video_thumb( $url, $height = '160px', $resolution = 'sddefault' ){
 			require( get_template_directory().'/partials/youtube-video-popup.php' );
 		}
 

@@ -310,11 +310,12 @@
 	add_shortcode( 'sp_video_popup',function( $atts ){
 	  global $youtube;
 	  $atts = shortcode_atts(array(
-	    'video_url' => '',
-	    'height'    => '280px'
+	    'video_url' 	=> '',
+	    'height'    	=> '280px',
+			'resolution' 	=> 'sddefault'
 	  ), $atts, 'sp_video_popup');
 
 	  ob_start();
-	  $youtube->create_video_thumb($atts['video_url'], '280px');
+	  $youtube->create_video_thumb( $atts['video_url'], '280px', $atts['resolution'] );
 	  return ob_get_clean();
 	});
