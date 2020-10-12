@@ -3,7 +3,7 @@
 class SP_USERS_JUMBLED extends SP_BASE{
 
 	function parent_class(){
-		return "row sp-list-users";
+		return "sp-list-users";
 	}
 
 	function user_html( $user ){

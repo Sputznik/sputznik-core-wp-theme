@@ -788,7 +788,6 @@ h3.thin {
 		transition:opacity 0.8s;
 		opacity: 1;
 	}
-
 }
 
 
@@ -796,12 +795,24 @@ h3.thin {
 	.sp-list-users .user{ width: 100%; }
 	.sp-list-users{ max-width: 400px; margin: 0 auto; }
 }
-/*
-@media( max-width: 400px ){
-	.sp-list-users .user .layer1{ width: 80%; }
-	.sp-list-users .layer2{ left: 0%; }
+
+@media( min-width: 1200px ){
+  .sp-list-users.grid3-hover .user{ margin-bottom: 120px;}
+  .sp-list-users.grid3-hover{ margin-bottom: 240px; }
+  .sp-list-users.grid3-hover .user .layer3{ top: calc(100% - 50px); padding-top: 0; height: auto; width: 90%; }
+	.sp-list-users.grid3-hover .user .layer1{ opacity: 0.2 !important}
+  .sp-list-users.grid3-hover .user:hover{ z-index: 1000; overflow: visible; }
+	.sp-list-users.grid3-hover .user:hover .layer1{ opacity: 1 !important;}
+
+	.sp-list-users.grid6 .user{ width: 16.66%; }
+	.sp-list-users.grid6 .user .layer1{ width: 100%; opacity: 0.2 !important; }
+	.sp-list-users.grid6 .user .layer2, .sp-list-users.grid6 .user .layer3{ transition: opacity 0.8s; width: 200%; opacity: 0;}
+	.sp-list-users.grid6 .user:hover .layer2, .sp-list-users.grid6 .user:hover .layer3{ opacity: 1;  }
+	.sp-list-users.grid6 .user .layer3{ top: calc( 100% + 110px ); left: -15px; }
+	.sp-list-users.grid6 .user:hover{ z-index: 1000; overflow: visible; }
+	.sp-list-users.grid6 .user:hover .layer1{ opacity: 1 !important;}
+	.sp-list-users.grid6 .layer2{ margin: -30px 0 0 -15px;  }
 }
-*/
 
 
 /* SP LIST USERS */
