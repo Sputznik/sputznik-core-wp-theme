@@ -39,5 +39,12 @@ jQuery.fn.youtube_video_thumb = function() {
 };
 
 jQuery(document).ready(function () {
-  jQuery('a[data-behaviour~=sp-youtube]').youtube_video_thumb();
+
+	jQuery('a[data-behaviour~=sp-youtube]').youtube_video_thumb(); /* EXECUTED ONLY ONCE */
+
+	/* EXECUTED ONLY WHEN THE BODY IS CHANGED */
+	jQuery("body").on('change',function(){
+		jQuery('a[data-behaviour~=sp-youtube]').youtube_video_thumb();
+	});
+
 });
