@@ -1,10 +1,10 @@
 
-$(document).ready(function(){
+jQuery(document).ready(function(){
 
 
-	$('[data-behaviour~=logos-slick]').each( function(){
+	jQuery('[data-behaviour~=logos-slick]').each( function(){
 
-		var $el = $( this );
+		var $el = jQuery( this );
 
 		$el.slick({
 			slidesToShow	: $el.data('items'),
