@@ -66,7 +66,7 @@ class SP_List_Users extends SiteOrigin_Widget {
 							'options' 	=> array(
 								'grid3'				=> 'Grid - 3 Columns',
 								'grid3-hover'	=> 'Grid - 3 Columns With Hover',
-								'grid6'				=> 'Grid - 6 Columns'
+								'grid5'				=> 'Grid - 5 Columns'
 							)
 						),
 					)
