@@ -83,8 +83,8 @@
 
 			wp_enqueue_style( 'sp-fonts', get_template_directory_uri() .'/css/fonts.css', array('sp-core-style'), SPUTZNIK_THEME_VERSION );
 
-			wp_deregister_script('jquery');
-			wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
+			//wp_deregister_script('jquery');
+			//wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
 
 			wp_enqueue_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), null, true );
 

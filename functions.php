@@ -1,6 +1,6 @@
 <?php
 
-	define('SPUTZNIK_THEME_VERSION', '2.1.14' );
+	define('SPUTZNIK_THEME_VERSION', '2.2.5' );
 
 	$inc_files = array(
 		'lib/class-sp-theme.php',
@@ -8,6 +8,9 @@
 		'lib/customize-theme/main.php',
 		'lib/google-fonts.php',
 		'lib/the.php',
+		'lib/class-sp-base.php',
+		'lib/class-sp-youtube-video.php',
+		'lib/class-sp-users-jumbled.php',
 	);
 
 	foreach($inc_files as $inc_file){
@@ -301,3 +304,18 @@
 
 
 	} );
+
+
+	// YOUTUBE VIDEO POPUP SHORTCODE
+	add_shortcode( 'sp_video_popup',function( $atts ){
+	  global $youtube;
+	  $atts = shortcode_atts(array(
+	    'video_url' 	=> '',
+	    'height'    	=> '280px',
+			'resolution' 	=> 'sddefault'
+	  ), $atts, 'sp_video_popup');
+
+	  ob_start();
+	  $youtube->create_video_thumb( $atts['video_url'], '280px', $atts['resolution'] );
+	  return ob_get_clean();
+	});
