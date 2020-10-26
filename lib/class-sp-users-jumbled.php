@@ -23,7 +23,8 @@ class SP_USERS_JUMBLED extends SP_BASE{
 
 		<div class="<?php _e( implode( ' ', $classes ) );?>">
 			<div class="layer1">
-				<div class="user-avatar" style="background-image:url('<?php echo $user['image'];?>');"></div>
+				<img src="<?php echo $user['image'];?>" />
+				<!--div class="user-avatar" style="background-image:url('<?php echo $user['image'];?>');"></div-->
 			</div>
 			<div class="layer2">
 				<div class="user-name"><?php echo $user['name'];?></div>
