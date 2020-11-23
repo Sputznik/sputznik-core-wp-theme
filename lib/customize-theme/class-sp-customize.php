@@ -70,6 +70,19 @@
 
 		function get_header_type(){ return $this->get_one_option( 'header_type', 'header1' ); }
 
+		function get_error_template(){
+			$pages_list = array();
+			$pages = get_pages( array('post_status'  => 'publish') );
+
+			$pages_list['default'] = 'Default';
+
+			foreach ( $pages as $page ) {
+				$pages_list[$page->post_name] = $page->post_title;
+			}
+
+			return $pages_list;
+		}
+
 		function panel( $wp_customize, $id, $label){
 
 			$wp_customize->add_panel($id, array(

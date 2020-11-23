@@ -10,7 +10,8 @@
 		'taxonomy.php',
 		'archive.php',
 		'author.php',
-		'footer.php'
+		'footer.php',
+		'404.php'
 	);
 
 	foreach($inc_files as $inc_file){
