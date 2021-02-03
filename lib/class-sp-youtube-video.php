@@ -31,7 +31,7 @@
     }
 
 		// RETURNS YOUTUBE VIDEO THUMB UI
-		function create_video_thumb( $url, $height = '160px', $resolution = 'sddefault' ){
+		function create_video_thumb( $url, $label = 'Video Thumbnail', $height = '160px', $resolution = 'sddefault' ){
 			require( get_template_directory().'/partials/youtube-video-popup.php' );
 		}
 

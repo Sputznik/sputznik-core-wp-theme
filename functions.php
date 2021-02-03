@@ -1,6 +1,6 @@
 <?php
 
-	define('SPUTZNIK_THEME_VERSION', '2.2.9' );
+	define('SPUTZNIK_THEME_VERSION', '2.3.0' );
 
 	$inc_files = array(
 		'lib/class-sp-theme.php',
@@ -316,6 +316,6 @@
 	  ), $atts, 'sp_video_popup');
 
 	  ob_start();
-	  $youtube->create_video_thumb( $atts['video_url'], '280px', $atts['resolution'] );
+	  $youtube->create_video_thumb( $atts['video_url'], 'Video Thumbnail', '280px', $atts['resolution'] );
 	  return ob_get_clean();
 	});
