@@ -44,6 +44,7 @@
 		        <h4>Tagged Under: </h4>
 		        <?php the_tags( '', '', '' ); }?>
 		      </div>
+					<?php do_action('sp_single7_after_post'); ?>
 					<div class="space">
 						<?php get_template_part( 'partials/comments', 'box');?>
 						<?php get_template_part( 'partials/post', 'navigation');?>
