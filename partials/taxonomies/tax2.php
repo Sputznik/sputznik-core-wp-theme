@@ -24,7 +24,7 @@
             	<a href='<?php the_permalink();?>' style="position: absolute; top:0;left:0;width:100%;height: 100%;"></a>
             </div>
           </div>
-          <div class="col-md-8 orbit-content"">
+          <div class="col-md-8 orbit-content">
             <h3 class='orbit-title'><a href='<?php the_permalink();?>'><?php the_title();?></a></h3>
 
           	<p>By <?php
@@ -41,5 +41,20 @@
 
       <?php endif; ?>
     </div>
+  </div>
+</div>
+<!-- PAGINATION -->
+<div class="container-fluid search-pagination">
+  <div class="container text-center">
+    <?php
+      the_posts_pagination(
+        array(
+          'mid_size' 	=> 1,
+          'prev_text' => __( '&laquo;' ),
+          'next_text' => __( '&raquo;' ),
+          'screen_reader_text' => __( ' ' ),
+        )
+      );
+    ?>
   </div>
 </div>
