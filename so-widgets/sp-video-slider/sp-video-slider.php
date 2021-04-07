@@ -82,15 +82,15 @@ class SP_Video_Slider extends SiteOrigin_Widget {
 							'label' 	=> __( 'Indicators Color', 'siteorigin-widgets' ),
 							'default' => '#a14200'
 						),
+						'play_btn_image' => array(
+							'type' 		=> 'media',
+							'label' 	=> __( 'Play Button Image', 'siteorigin-widgets' ),
+							'choose' 	=> __( 'Choose image', 'siteorigin-widgets' ),
+							'update' 	=> __( 'Set image', 'siteorigin-widgets' ),
+							'library' 	=> 'image',
+							'fallback' 	=> false
+						),
 	 				)
-				),
-				'play_btn_image' => array(
-					'type' 		=> 'media',
-					'label' 	=> __( 'Play Button Image', 'siteorigin-widgets' ),
-					'choose' 	=> __( 'Choose image', 'siteorigin-widgets' ),
-					'update' 	=> __( 'Set image', 'siteorigin-widgets' ),
-					'library' 	=> 'image',
-					'fallback' 	=> false
 				),
 			),
 			//The $base_folder path string.

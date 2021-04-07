@@ -1,12 +1,13 @@
 <?php
 
 	global $youtube;
-	$slide_count = !empty( $instance['show_slides'] ) ? $instance['show_slides'] : '4';
+	$design 					= $instance['design'];
+	$slide_count 			= !empty( $instance['show_slides'] ) ? $instance['show_slides'] : '4';
 	$title_color      = !empty( $design['title_color'] ) ? $design['title_color'] : '#000000';
 	$desc_color     	= !empty( $design['desc_color'] ) ? $design['desc_color'] : '#888888';
 	$indicators_color = !empty( $design['indicators_color'] ) ? $design['indicators_color'] : '#a14200';
 	$arrow_bg_color   = !empty( $design['arrow_bg_color'] ) ? $design['arrow_bg_color'] : '#ffffff';
-	$play_btn_url  = wp_get_attachment_url( $instance['play_btn_image']);
+	$play_btn_url  		= wp_get_attachment_url( $design['play_btn_image']);
 
 ?>
 
