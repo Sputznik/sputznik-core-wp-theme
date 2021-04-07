@@ -94,7 +94,7 @@
 
 			wp_enqueue_script('slider-script', get_template_directory_uri() .'/js/logo-slider.js', array('jquery'), SPUTZNIK_THEME_VERSION, true);
 
-			wp_enqueue_script('video-slider-script', get_template_directory_uri() .'/js/video-slider.js', array('jquery'), time(), true);
+			wp_enqueue_script('video-slider-script', get_template_directory_uri() .'/js/video-slider.js', array('jquery'), SPUTZNIK_THEME_VERSION, true);
 
 			wp_enqueue_script('image-slider-script', get_template_directory_uri() .'/js/image-slider.js', array('jquery'), SPUTZNIK_THEME_VERSION, true );
 
