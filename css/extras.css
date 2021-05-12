@@ -121,6 +121,7 @@
 
 }
 
+
 /* Header 4 */
 .header4 img.desktop-logo{
   max-width: 230px;
@@ -1177,4 +1178,35 @@ h3.thin {
   .container-images .slick-next{ right: 10px; bottom: -40px; }
   .container-images [dir='rtl'] .slick-next{ right: auto; left: 10px; }
   /* Slick Arrows */
+}
+
+
+/* SEARCH ICON HEADER FIX */
+.nav.sidebar-nav > li.sp_search_item > a{
+  position: relative;
+  height: 40px;
+  padding: 0;
+}
+.nav.sidebar-nav > li.sp_search_item .fa-search{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+
+@media (max-width: 768px){
+  .navbar-nav > li.sp_search_item > a{
+    position: relative;
+    height: 40px;
+    padding: 0;
+  }
+  .navbar-nav > li.sp_search_item .fa-search{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    padding-left: 15px;
+  }
 }
