@@ -27,6 +27,18 @@
 		);
 
 		$fonts[] = array(
+			'slug'	=> 'poppins',
+			'name'	=> 'Poppins',
+			'url'		=> 'Poppins:100,200,300,400,500,600,700'
+		);
+
+		$fonts[] = array(
+			'slug'	=> 'lato',
+			'name'	=> 'Lato',
+			'url'		=> 'Lato:100,300,400,700'
+		);
+
+		$fonts[] = array(
 			'slug'	=> 'mukta',
 			'name'	=> 'Mukta',
 			'url'	=> 'Mukta'
