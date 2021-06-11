@@ -39,6 +39,12 @@
 		);
 
 		$fonts[] = array(
+			'slug'	=> 'cabin',
+			'name'	=> 'Cabin',
+			'url'		=> 'Cabin:wght@400;500;600;700'
+		);
+
+		$fonts[] = array(
 			'slug'	=> 'mukta',
 			'name'	=> 'Mukta',
 			'url'	=> 'Mukta'
