@@ -16,7 +16,11 @@
 
 ?>
 <div class='<?php _e( $instance['align'] ); ?>'>
-	<a <?php if( $instance['is_modal'] ):?>data-toggle='modal'<?php endif;?> href="<?php _e( $widget_link );?>" class="<?php _e( implode(' ', $widget_classes) );?>"><?php _e( $instance['text'] );?></a>
+	<a <?php if( $instance['is_modal'] ):?>data-toggle='modal'<?php endif;?>
+			href="<?php _e( $widget_link );?>" class="<?php _e( implode(' ', $widget_classes) );?>"
+			<?php if( !$instance['is_modal'] && $instance['new_tab'] ):?>target="_blank"<?php endif;?>>
+		<?php _e( $instance['text'] );?>
+	</a>
 </div>
 <?php if( $instance['is_modal'] ):?>
 <div id="<?php _e( 'modal-'.$widget_id );?>" class="modal sow-modal fade" tabindex="-1" role="dialog">

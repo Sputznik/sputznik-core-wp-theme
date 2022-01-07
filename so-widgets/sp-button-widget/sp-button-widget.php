@@ -66,6 +66,15 @@ class SP_Button_Widget extends SiteOrigin_Widget {
 						'_else[is_modal]' 	=> array('show'),
 					),
 				),
+				'new_tab' => array(
+					'type' => 'checkbox',
+					'label' => __( 'Open in a new window', 'siteorigin-widgets' ),
+					'default' => false,
+					'state_handler' => array(
+						'is_modal[active]' 	=> array('hide'),
+						'_else[is_modal]' 	=> array('show'),
+					),
+				),
 				'type' => array(
 					'type' 		=> 'select',
 					'label' 	=> __( 'Button Type', 'siteorigin-widgets' ),
