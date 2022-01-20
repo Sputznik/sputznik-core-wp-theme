@@ -51,6 +51,12 @@
 		);
 
 		$fonts[] = array(
+			'slug'	=> 'noto-sans',
+			'name'	=> 'Noto Sans',
+			'url'		=> 'Noto+Sans:wght@400;700'
+		);
+
+		$fonts[] = array(
 			'slug'	=> 'noto',
 			'name'	=> 'Noto Serif',
 			'url'	=> 'Noto+Serif'
