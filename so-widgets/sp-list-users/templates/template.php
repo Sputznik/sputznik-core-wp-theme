@@ -1,10 +1,10 @@
 <?php
 
-	$sp_users_ui = SP_USERS_JUMBLED::getInstance();
-
+	$layout_type = $instance['layout_type'];
+	$sp_users_ui = ( $layout_type == 'default' ) ? SP_USERS_JUMBLED::getInstance() : SP_USERS_GRID::getInstance();
 	$classes = array( $sp_users_ui->parent_class() );
 
-	if( isset( $instance['design'] ) && isset( $instance['design']['style'] ) ){
+	if( $layout_type == 'default' && isset( $instance['design'] ) && isset( $instance['design']['style'] ) ){
 		array_push( $classes, $instance['design']['style'] );
 	}
 

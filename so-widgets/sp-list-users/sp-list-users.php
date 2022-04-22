@@ -20,6 +20,18 @@ class SP_List_Users extends SiteOrigin_Widget {
 			),
 			array(),
 			array(
+				'layout_type' => array(
+					'type'    => 'select',
+					'label'   => __( 'Choose Layout', 'siteorigin-widgets' ),
+					'options' => array(
+						'default'		=> 'Default',
+						'popup'			=> 'User Grid',
+					),
+					'state_emitter' => array(
+						'callback' 	=> 'select',
+						'args' 			=> array( 'layout_type' )
+					),
+				),
 				'items' => array(
 					'type' 	=> 'repeater',
 					'label' => __( 'Users' , 'siteorigin-widgets' ),
@@ -58,6 +70,10 @@ class SP_List_Users extends SiteOrigin_Widget {
 					'type'	=> 'section',
 					'label' => __( 'Design' , 'siteorigin-widgets' ),
 	 				'hide' => true,
+					'state_handler' => array(
+						'layout_type[popup]' => array('hide'),
+						'layout_type[default]' => array('show'),
+					),
 	 				'fields' => array(
 						'style' => array(
 							'type' 		=> 'select',

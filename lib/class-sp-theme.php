@@ -77,7 +77,7 @@
 
 			wp_enqueue_style( 'sp-core-style', get_template_directory_uri() .'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts'), SPUTZNIK_THEME_VERSION );
 
-			wp_enqueue_style( 'extras', get_template_directory_uri() .'/css/extras.css', array(), SPUTZNIK_THEME_VERSION );
+			wp_enqueue_style( 'extras', get_template_directory_uri() .'/css/extras.css', array(), time() );
 
 			wp_enqueue_style( 'sp-core-single', get_template_directory_uri() .'/css/single.css', array(), SPUTZNIK_THEME_VERSION );
 
@@ -97,6 +97,8 @@
 			wp_enqueue_script('video-slider-script', get_template_directory_uri() .'/js/video-slider.js', array('jquery'), SPUTZNIK_THEME_VERSION, true);
 
 			wp_enqueue_script('image-slider-script', get_template_directory_uri() .'/js/image-slider.js', array('jquery'), SPUTZNIK_THEME_VERSION, true );
+
+			wp_enqueue_script('user-modal', get_template_directory_uri() .'/js/user-modal.js', array('jquery'), time(), true );
 
 		}
 
