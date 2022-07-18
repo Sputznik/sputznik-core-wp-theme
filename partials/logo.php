@@ -19,7 +19,7 @@
 
 			$img_desktop_class = isset( $option['logo']['mobile'] ) ? 'hidden-xs desktop-logo' : 'desktop-logo';
 
-			$img_desktop_src = esc_url( $option['logo']['desktop'] );
+			$img_desktop_src = apply_filters( 'sp_logo_img_desktop', esc_url( $option['logo']['desktop'] ) );
 
 			_e('<img class="'.$img_desktop_class.'" src="'.$img_desktop_src.'" alt="'.$img_alt.'">');
 		}
@@ -30,6 +30,8 @@
 	 		$img_mobile_class = 'visible-xs';
 
 	 		$img_mobile_src = ( isset( $option['logo']['mobile'] ) && $option['logo']['mobile'] ) ? esc_url( $option['logo']['mobile'] ) : esc_url( $option['logo']['desktop'] );
+
+			$img_mobile_src = apply_filters( 'sp_logo_img_mobile', $img_mobile_src );
 
 	 		_e('<img class="'.$img_mobile_class.'" src="'.$img_mobile_src.'" alt="'.$img_alt.'">');
 
