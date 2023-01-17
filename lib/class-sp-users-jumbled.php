@@ -8,7 +8,7 @@ class SP_USERS_JUMBLED extends SP_BASE{
 
 	function user_html( $user ){
 		/*
-		* image, name, designation, description
+		* image, name, designation, description, email
 		*/
 
 		//print_r( $user );
@@ -29,6 +29,10 @@ class SP_USERS_JUMBLED extends SP_BASE{
 			<div class="layer2">
 				<div class="user-name"><?php echo $user['name'];?></div>
 				<div class="user-designation"><?php echo $user['designation'];?></div>
+				<div class="user-email"><?php echo $user['email'];?></div>
+				<div class="decoration-wrapper">
+					<div class="decoration"></div>
+				</div>
 			</div>
 			<?php if( isset( $user['description'] ) && $user['description'] ):?>
 			<div class="layer3"><?php echo $user['description'];?></div>

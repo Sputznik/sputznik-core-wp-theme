@@ -39,6 +39,11 @@ class SP_List_Users extends SiteOrigin_Widget {
 							'label' 		=> __( 'Designation', 'siteorigin-widgets' ),
 							'default' 	=> '',
 						),
+						'email' => array(
+							'type' 			=> 'text',
+							'label' 		=> __( 'Email', 'siteorigin-widgets' ),
+							'default' 	=> '',
+						),
 						'avatar' => array(
 							'type' 			=> 'media',
 							'label' 		=> __( 'Choose Image', 'siteorigin-widgets' ),
