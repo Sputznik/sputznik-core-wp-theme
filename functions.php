@@ -1,6 +1,6 @@
 <?php
 
-	define('SPUTZNIK_THEME_VERSION', '2.3.3' );
+	define('SPUTZNIK_THEME_VERSION', '2.3.4' ); 
 
 	$inc_files = array(
 		'lib/class-sp-theme.php',

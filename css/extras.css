@@ -857,7 +857,8 @@ h3.thin {
 	font-size: 14px;
 }
 
-.sp-list-users .user-email{ font-size: 18px; }
+.sp-list-users .user-email{ font-size: 16px; padding: 5px 0; }
+.sp-list-users .user-email > a { text-decoration: none; }
 
 .sp-list-users .decoration-wrapper{
   display: flex;
@@ -865,11 +866,11 @@ h3.thin {
 }
 
 .sp-list-users .decoration-wrapper .decoration{
-  height: 2px;
-  display: inline-block;
-  border-top: 2px solid #555555;
+  height: 3px;
   width: 100%;
   max-width: 30%;
+  display: inline-block;
+  border-top: 3px solid #555555;
 }
 
 

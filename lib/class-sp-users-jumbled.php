@@ -24,12 +24,16 @@ class SP_USERS_JUMBLED extends SP_BASE{
 		<div class="<?php _e( implode( ' ', $classes ) );?>">
 			<div class="layer1">
 				<img src="<?php echo $user['image'];?>" />
-				<!--div class="user-avatar" style="background-image:url('<?php echo $user['image'];?>');"></div-->
+				<!--div class="user-avatar" style="background-image:url('<?php //echo $user['image'];?>');"></div-->
 			</div>
 			<div class="layer2">
 				<div class="user-name"><?php echo $user['name'];?></div>
 				<div class="user-designation"><?php echo $user['designation'];?></div>
-				<div class="user-email"><?php echo $user['email'];?></div>
+				<div class="user-email">
+					<?php if( $user['email'] ): ?>
+						<a href="mailto:<?php _e( $user['email'] );?>"><?php echo $user['email'];?></a>
+					<?php endif;?>
+					</div>
 				<div class="decoration-wrapper">
 					<div class="decoration"></div>
 				</div>
