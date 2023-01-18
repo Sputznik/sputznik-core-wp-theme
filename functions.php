@@ -1,6 +1,6 @@
 <?php
 
-	define('SPUTZNIK_THEME_VERSION', '2.3.4' ); 
+	define('SPUTZNIK_THEME_VERSION', '2.3.4' );
 
 	$inc_files = array(
 		'lib/class-sp-theme.php',
@@ -123,7 +123,7 @@
 		$sp_nav_menu_options = apply_filters( 'sp_nav_menu_options', array(
 			'menu'              => 'primary',
 			'theme_location'    => 'primary',
-			'depth'             => 2,
+			'depth'             => 3,
 			'container'         => 'div',
 			'container_class'   => 'navbar',
 			//'container_id'      => 'sidebar-wrapper',
